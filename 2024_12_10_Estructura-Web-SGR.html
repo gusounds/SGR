@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {font-family: 'Roboto', sans-serif; background-color: #F2F1E8; padding: 20px; min-height: 100vh; font-weight: 600;}
+        
+span {color: red !important;}
+
+.site-structure {font-size: 14px; max-width: 1400px; margin: 0 auto;}
+.level-1-container {display: flex; justify-content: space-between; gap: 20px; margin-bottom: 30px;}
+.structure-column {flex: 1; display: flex; flex-direction: column; align-items: flex-start; position: relative; margin: 0 70px;}
+.level-1 {background-color: #2a5fb6; color: #F2F1E8; padding: 10px 12px; border-radius: 20px; margin: 10px 0; width: 100%; text-align: center; position: relative; z-index: 2;}
+.content-container { position: relative; width: 100%; padding-top: 20px;}
+
+/* Línea desde nivel 1 */
+#somos-sgr .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+#normativa .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+#proyectos .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+#convocatorias .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+#herramientas .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+#prensa .content-container::before { content: ''; position: absolute; top: 0; left: 20px; width: 1px; height: 20px; background-color: #636362;}
+
+/* Contenedores para cada nivel */
+.level-group-2, .level-group-3, .level-group-32, .level-group-33, .level-group-34, .level-group-4 {position: relative; padding-left: 20px; margin-bottom: 10px;}
+
+/* Líneas verticales para cada grupo */
+#somos-sgr .level-group-2::before {content: ''; position: absolute; top: -40px; left: 20px; width: 1px; height: 1889px; background-color: #636362;}
+#somos-sgr .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 1271px; background-color: #636362;}
+#somos-sgr .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+#normativa .level-group-2::before {content: ''; position: absolute; top: -40px; left: 20px; width: 1px; height: 756px; background-color: #636362;}
+#normativa .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 182px; background-color: #636362;}
+#normativa .level-group-32::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 148px; background-color: #636362;}
+#normativa .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+#proyectos .level-group-2::before {content: ''; position: absolute; top: -40px; left: 20px; width: 1px; height: 3618px; background-color: #636362;}
+#proyectos .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 1153px; background-color: #636362;}
+#proyectos .level-group-32::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 2031px; background-color: #636362;}
+#proyectos .level-group-33::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 282px; background-color: #636362;}
+#proyectos .level-group-34::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 224px; background-color: #636362;}
+#proyectos .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+#convocatorias .level-group-2::before {content: ''; position: absolute; top: -60px; left: 20px; width: 1px; height: 1139px; background-color: #636362;}
+#convocatorias .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 137px; background-color: #636362;}
+#convocatorias .level-group-32::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 148px; background-color: #636362;}
+#convocatorias .level-group-33::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 282px; background-color: #636362;}
+#convocatorias .level-group-34::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 224px; background-color: #636362;}
+#convocatorias .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+#herramientas .level-group-2::before {content: ''; position: absolute; top: -40px; left: 20px; width: 1px; height: 3441px; background-color: #636362;}
+#herramientas .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 402px; background-color: #636362;}
+#herramientas .level-group-32::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 61px; background-color: #636362;}
+#herramientas .level-group-33::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 224px; background-color: #636362;}
+#herramientas .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+#prensa .level-group-2::before {content: ''; position: absolute; top: -40px; left: 20px; width: 1px; height: 168px; background-color: #636362;}
+#prensa .level-group-3::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 1153px; background-color: #636362;}
+#prensa .level-group-32::before {content: ''; position: absolute; top: -20px; left: 20px; width: 1px; height: 148px; background-color: #636362;}
+#prensa .level-group-4::before {content: ''; position: absolute; top: -29px; left: 20px; width: 1px; height: 140px; /*background-color: #636362;*/}
+
+
+.level-2, .level-3, .level-32, .level-33, .level-34, .level-4, .level-5 {position: relative; width: 100%; margin: 8px 0; padding: 6px 12px;}
+.level-2, .level-3, .level-32, .level-33, .level-34 {background-color: transparent;}
+.level-2 {border: 2px solid #2a5fb6; margin-left: 19px; background-color: #d5dff0; border-radius: 20px; color: #212529; font-weight: 500; width: fit-content;}
+.level-3 {border: 2px solid #79a3c9; margin-left: 19px; border-radius: 20px; font-weight: 500; width: fit-content;}
+.level-32 {border: 2px solid #79a3c9; margin-left: 19px; border-radius: 20px; font-weight: 500; width: fit-content;}
+.level-33 {border: 2px solid #79a3c9; margin-left: 19px; border-radius: 20px; font-weight: 500; width: fit-content;}
+.level-34 {border: 2px solid #79a3c9; margin-left: 19px; border-radius: 20px; font-weight: 500; width: fit-content;}
+.level-4 {color: #2a5fb6; margin-left: 20px;}
+.level-5 {color: #565656; margin-left: 40px;}
+
+/* Líneas horizontales conectoras */
+#somos-sgr .level-2::before, .level-3::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#normativa .level-2::before, .level-3::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#normativa .level-2::before, .level-32::before, .level-33::before, .level-34::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#proyectos .level-2::before, .level-3::before, .level-33::before, .level-34::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#convocatorias .level-2::before, .level-3::before, .level-33::before, .level-34::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#herramientas .level-2::before, .level-3::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+#prensa .level-2::before, .level-3::before { content: ''; position: absolute; top: 50%; left: -20px; width: 20px; height: 1px; background-color: #636362; }
+
+
+.level-4 ul, .level-5 ul {list-style-type: disc; padding-left: 20px; margin: 0;}
+.level-4 ul li {margin-bottom:16px !important; font-weight: 500;}
+.level-5 ul li {margin: 0 0 16px 0; font-style: italic; font-weight: 100 !important; max-width: 80px; font-size: .8rem;}
+
+.zoom-controls {position: fixed; bottom: 20px; right: 20px; z-index: 1000;}
+.zoom-controls button {background-color: #2F2E2C; color: #F2F1E8; border: none; padding: 8px 16px; margin: 0 5px; border-radius: 4px;}
+    </style>
+</head>
+<body>
+    <div class="site-structure">
+        <div class="level-1-container">
+            <!-- Concepto 1 (sin contenido) -->
+            <div class="structure-column">
+                <div class="level-1">Inicio</div>
+            </div>
+            
+            <!-- Concepto 2 (con estructura completa) -->
+            <div class="structure-column">
+                <div class="level-1">Somos SGR</div>
+                <div class="content-container" id="somos-sgr">
+                    <div class="level-group-2">
+                        <div class="level-2">Sobre el SGR</div>
+                        <div class="level-2">Órganos del SGR</div>
+                        <div class="level-group-3">
+                            <div class="level-3">Comisión Rectora</div>
+                            <div class="level-3">DNP</div>
+                            <div class="level-3">Ministerios</div>
+                            <div class="level-3">OCAD</div>
+                            <div class="level-group-4">
+                                <div class="level-4">
+                                    <ul>
+                                        <li>OCAD Regionales</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>OCAD Pacífico (Sesiones)</li>
+                                        <li>OCAD Llanos (Sesiones)</li>
+                                        <li>OCAD Centro Sur (Sesiones)</li>
+                                        <li>OCAD Eje Cafetero (Sesiones)</li>
+                                        <li>OCAD Caribe (Sesiones)</li>
+                                        <li>OCAD Centro Oriente (Sesiones)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="level-3">OCAD Paz</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Sesiones OCAD PAZ</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Resultados Elecciones</li>
+                                    </ul>
+                                </div>
+                            <div class="level-3">OCAD Ciencia Tecnología e Innovación</div>
+                            <div class="level-3">Resultados Elecciones OCADs</div>
+                                <div class="level-5">
+                                        <ul>
+                                            <li>Consolidado conformación OCAD Municipales (x ley)</li>
+                                        </ul>
+                                    </div>
+                            <div class="level-3">Preguntas Frecuentes</div>
+                            <div class="level-3">Directorio</div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>SGR (Completo: Direcciones; Comisión Rectora; etc)</li>
+                                        <li>Miembros OCAD Regionales (6)</li>
+                                        <li>Miembros OCAD Paz</li>
+                                        <li>Miembros Instancia Indígena</li>
+                                        <li>Miembros Afrocolombianos</li>
+                                        <li>Miembros Rrom</li>
+                                    </ul>
+                                </div>
+                        </div>
+                            <div class="level-2">Antiguo Sistema</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conceptos 3-7 -->
+            <div class="structure-column">
+                <div class="level-1">Normativa</div>
+                <div class="content-container" id="normativa">
+                    <div class="level-group-2">
+                        <div class="level-2">Acto Legislativo y Leyes</div>
+                        <div class="level-2">Decretos</div>
+                        <div class="level-2">Acuerdos Comisión Rectora</div>
+                        <div class="level-2">Sentencias Corte Constitucional</div>
+                        <div class="level-2">Circulares</div>
+                        <div class="level-2">Conceptos</div>
+                        <div class="level-2">Normativa OCAD Paz</div>
+                        <!-- <div class="level-2">Mejoras Nueva Ley de Regalías</div> -->
+                        <div class="level-2">Resoluciones</div>
+                        <div class="level-group-3">
+                            <div class="level-3">Conceptos OCAD</div>
+                            <div class="level-3">Conceptos Proyectos</div>
+                            <div class="level-3">Conceptos Presupuestos</div>  
+                        </div>
+                        <div class="level-2">Otros Documentos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="structure-column">
+                <div class="level-1">Proyectos</div>
+                <div class="content-container" id="proyectos">
+
+                    <div class="level-group-2">
+
+                        <div class="level-2">Ciclo del proyecto</div>
+                        <div class="level-group-32">
+                            <div class="level-3">Formulación y presentación</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Botones para los 3 primeros pasos</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Metodología General Ajustada</li>
+                                        <li>Banco de Programas y Proyectos - SUIFP</li>
+                                        <li>Consulta de Distribuciones (SICODIS)</li>
+                                        <li>Portal de Transparencia Económica</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Guías, Instructivos y Formatos</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Documentos para la Presentación de Proyectos (Formatos Generale)</li>
+                                        <li>Guías Orientadoras Nueva Ley de Regalías</li>
+                                        <li>Guía de Implementación y Documentación Técnica (Aquí van: Guías del Acuerdo 45; Guías MGA de Diligenciamiento; Guía de Orientaciones [Inversiones GR];</li>
+                                        <li>Formatos OCAD</li>
+                                        <li>Información Clave</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Asistencia Técnica y Jornadas de Formación</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Proyectos TIPO (se fusiona con Estructuración SGR PT)</li>
+                                    </ul>
+                                </div>
+
+                            <div class="level-3">Viabilidad y registro</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Fuentes de Financiación (descargar de fuentes)</li>
+                                        <li>Verificación de Requisitos</li>
+                                    </ul>
+                                </div>
+                            <div class="level-32">Priorización y aprobación</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Metodología de Priorización</li>
+                                        <li>Priorización de Proyectos AIR 40%</li>
+                                        <li>Metodoligía Cierre de Brechas</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Socialización Metodología</li>
+                                    </ul>
+                                </div>
+
+                            <div class="level-32">Seguimiento Evaluación y Control</div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Gestión de proyectos GESPROY (botón)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Medición del Desempeño de los Proyectos</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Información Metodológica (se debe actualizar)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Seguimiento SGR</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Visitas de seguimiento a Proyectos</li>
+                                        <li>Asistencia Técnica a Entidades Ejecutoras del SGR</li>
+                                    </ul>
+                                </div>
+
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Control SGR</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Procedimiento Administrativo de Control</li>
+                                        <li>Procedimientos Correctivos y Sancionatorios</li>
+                                        <li>Actuaciones de Control</li>
+                                        <li>Procedimientos Preventivos</li>
+                                        <li>Modulo de Consulta (Gesproy)</li>
+                                    </ul>
+                                </div>
+
+                        </div>
+
+                        <div class="level-2">Instancias Comunidades Étnicas (Aquí va la información de enfoque Diferencial Étnico)</div>
+                        
+                        <div class="level-group-33">
+                            <div class="level-33">Instancia Indígenas</div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Sesiones</li>
+                                    </ul>
+                                </div>
+                            <div class="level-32">Instancia Afrocolombianos</div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Sesiones</li>
+                                    </ul>
+                                </div>
+                            <div class="level-32">Instancia Rrom</div>
+                        </div>
+
+                        <div class="level-2">Atención de Emergencia por COVID-19</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="structure-column">
+                <div class="level-1">Convocatorias</div>
+                <div class="content-container" id="convocatorias">
+                    <div class="level-group-2">
+                        <div class="level-2">Cronográma</div>
+                        <div class="level-2">Asignación para la Paz</div>
+                        <div class="level-group-3">
+                            <div class="level-3">Aprobaciones asignación para la Paz</div>
+                            <div class="level-3">Simuladores (% Asignación Paz)</div>
+                        </div>
+                        <div class="level-2">Convocatorias OCAD Paz</div>
+                        <div class="level-group-32">
+                            <div class="level-32">Proyecto Postulados Convocatoria 1</div>
+                            <div class="level-32">Proyecto Postulados Convocatoria 2</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Lista Proyectos Elegibles</li>
+                                        <li>Aprobaciones Municipios PDET</li>
+                                        <li>Toma de decisiones en la Aprobación de Proyectos</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Lista de Proyectos Elegibles</li>
+                                        <li>Aprobaciones Municipios PDET</li>
+                                        <li>Toma de Decisiones en la Aprobación de Proyectos</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="level-2">CTel</div>
+                        <div class="level-2">Ambiente y Desarrollo Sostenible</div>
+                    </div>
+                </div>
+            </div>
+            <div class="structure-column">
+                <div class="level-1">Observatorio SGR</div>
+                <div class="content-container" id="herramientas">
+                    <div class="level-group-2">
+                        <div class="level-2">Resultados de Informes (+ visor)</div>
+                        <div class="level-group-3">
+                            <div class="level-3">Balance de Aprobaciones</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Bases Históricas de Contratos por Años</li>
+                                        <li>Bases Históricas de Proyectos por Años</li>
+                                    </ul>
+                                </div>
+                            <div class="level-3">Visualizador Contratos</div>
+                            <div class="level-3">Visualizador Alertas</div>
+                        </div>
+                        <div class="level-2">Auditores Ciudadanos</div>
+                        <div class="level-group-32">
+                            <div class="level-32">Auditores Ciudadanos Fase II</div>
+                            <div class="level-4">
+                                    <ul>
+                                        <li>Mapa Inversiones</li>
+                                    </ul>
+                            </div>
+                        </div>
+
+                        <div class="level-2">Control Social</div>
+                        <div class="level-group-33">
+                            <div class="level-33">Modelo de Participación Ciudadana</div>
+                            <div class="level-33">Auditorias Ciudadanas Autónomas</div>
+                            <div class="level-33">Resultados de Control Social</div>
+                        </div>
+
+                        <div class="level-2">Seguimiento a Proyectos</div>
+                        <div class="level-2">Medición de Desempeño IGPR</div>
+                                    <div class="level-4">
+                                            <ul>
+                                                <li>IGPR 1.0.</li>
+                                                <li>IGPR IV Trim 2021</li>
+                                                <li>Resultados Anualidades 2021-2022</li>
+                                                <li>IGPR I Trim 2022</li>
+                                                <li>IGPR II Trim 2022</li>
+                                                <li>IGPR III Trim 2022</li>
+                                                <li>IGPR IV Trim 2022</li>
+                                                <li>IGPR I Trim 2023</li>
+                                                <li>IGPR II Trim 2023</li>
+                                                <li>IGPR III Trim 2023</li>
+                                                <li>IGPR I Trim 2024</li>
+                                            </ul>
+                                    </div>
+                        <div class="level-2">Seguimiento Priorización Proyectos OCAD Regionales</div>
+
+                        <div class="level-2">Informes de análisis (antes: boletín mensual)</div>
+
+                        <div class="level-2">Evaluación SGR (Repositorio)</div>
+                        <div class="level-4">
+                                <ul>   
+                                    <li>Evaluación sectorial</li>
+                                    <li>Evaluación Transporte</li>
+                                    <li>Evaluación Agua Potable</li>
+                                    <li>Evaluación Ambiente y Desarrollo Sostenible</li>
+                                    <li>Evaluación Salud</li>
+                                    <li>Evaluación Educación</li>
+                                    <li>Evaluación CTel</li>
+                                    <li>Evalución Agropecuario</li>
+                                    <li>Evaluación Servicios Públicos Domiciliarios</li>
+                                    <li>Evaluación Vivienda</li>
+                                    <li>Evaluación Regional</li>
+                                    <li>Evaluación Región Centro Oriente</li>
+                                    <li>Evaluación Región Eje CAfetero</li>
+                                    <li>Evaluación Región Llanos</li>
+                                    <li>Evaluación Región Pacífico</li>
+                                    <li>Evaluación Región Caribe</li>
+                                    <li>Evaluación Región Centro Sur</li>
+                                </ul>
+                        </div>
+
+                        <div class="level-2">Balances Semestrales</div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Balances y Observaciones Frecuentes</li>
+                                    </ul>
+                                </div>
+
+                        <div class="level-2">Informes por año</div>
+
+                        <div class="level-2">Informes Trimestrale Ley 1530</div>
+
+                        <div class="level-2">Reportes a Órganos de Control y FGN</div>
+
+                        <div class="level-2">Informes Semestrales Ley 2056</div>
+
+                        <div class="level-2">Transferencia y gestión del Conocimiento</div>
+                                    <div class="level-4">
+                                            <ul>
+                                                <li>Dialoguemos sobre Regalías</li>
+                                                <li>Jornadas de Formación</li>
+                                                <li>En Sintonía con</li>
+                                                <li>Regalías por Colombia</li>
+                                                <li>Actualizate con las Regalías</li>
+                                                <li>Regalías para la Vida</li>
+                                                <li>Aprendiendo con Regalías</li>
+                                                <li>Seminario Internacional Regalías y Calidad</li>
+                                                <li>Presentaciones Regalías</li>
+                                                <li>Ruta Nacional de Regalías</li>
+                                                <li>Presentaciones SGR</li>
+                                                <li>Estudiemos la Reforma</li>
+                                                <li>Así Avanzamos</li>
+                                                <li>Paso a paso para la Elaboración del Cápitulo</li>
+                                            </ul>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="structure-column">
+                <div class="level-1">Prensa</div>
+                <div class="content-container" id="prensa">
+                    <div class="level-group-2">
+                        <div class="level-2">Comunicados de Prensa</div>
+                        <div class="level-2">Monitoreo (Drones. Preguntar si podemos quitar)</div>
+                                <div class="level-4">
+                                    <ul>
+                                        <li>Monitoreo A proyectos de Regalías</li>
+                                    </ul>
+                                </div>
+                                <div class="level-5">
+                                    <ul>
+                                        <li>Monitoreo Región Eje Cafetero</li>
+                                        <li>Monitoreo Región Centro Sur</li>
+                                        <li>Monitoreo Región Pacífico</li>
+                                        <li>Monitoreo Región Racibe</li>
+                                        <li>Monitoreo Región Centro Oriente</li>
+                                        <li>Monitoreo Región Llanos</li>
+                                    </ul>
+                                </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zoom-controls">
+        <button onclick="zoom(1.1)">Zoom +</button>
+        <button onclick="zoom(0.9)">Zoom -</button>
+    </div>
+
+    <script>
+        let currentZoom = 1;
+        const siteStructure = document.querySelector('.site-structure');
+
+        function zoom(factor) {
+            currentZoom *= factor;
+            siteStructure.style.transform = `scale(${currentZoom})`;
+            siteStructure.style.transformOrigin = 'center top';
+        }
+    </script>
+</body>
+</html>
