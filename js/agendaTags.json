@@ -1,0 +1,39 @@
+{
+  "tags": [
+    {
+      "id": "elementos-agenda",
+      "tipos": {
+        "boletin-sar": { "nombre": "Boletín SAR" },
+        "rendicion-cuentas": { "nombre": "Rendición de Cuentas" },
+        "asistencia-tecnica-territorial": { "nombre": "Asistencia Técnica Territorial" },
+        "asistencia-tecnica": { "nombre": "Asistencia Técnica" }
+      },
+      "fechas": [
+        {
+          "fecha": "2025-02-18",
+          "estado": "active",
+          "url": "https://www.sgr.gov.co/boletin-24-enero",
+          "tipo": "boletin-sar"
+        },
+        {
+          "fecha": "2025-02-20",
+          "estado": "active",
+          "url": "https://www.sgr.gov.co/rendicion-cuentas",
+          "tipo": "rendicion-cuentas"
+        },
+        {
+          "fecha": "2025-02-21",
+          "estado": "disabled",
+          "url": null,
+          "tipo": "asistencia-tecnica"
+        },
+        {
+          "fecha": "2025-02-17",
+          "estado": "active",
+          "url": "#",
+          "tipo": "asistencia-tecnica-territorial"
+        }
+      ]
+    }
+  ]
+}

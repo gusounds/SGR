@@ -1,0 +1,14 @@
+{
+  "titulo": "Contenido destacado",
+  "imagen": {
+    "src": "https://colaboracion.dnp.gov.co/CDT/PublishingImages/Noticias/2024/Diciembre/Boletín-Director%20firmando%20acuerdo%20en%20Cali.jpeg",
+    "alt": "Director del DNP firmando acuerdo con líderes afrocolombianos en Cali",
+    "width": 800,
+    "height": 600
+  },
+  "titular": "Equipo técnico del DNP y del Sistema General de Regalías asiste a líderes afrocolombianos en Cali, Valle del Cauca",
+  "fecha": "2024-12-22",
+  "fechaFormateada": "Diciembre 22 de 2024",
+  "url": "http://google.com",
+  "descripcion": "El Gobierno nacional ofreció asistencia técnica con enfoque especial a líderes negros, afrocolombianos, raizales y palenqueros en el Valle del Cauca."
+}
