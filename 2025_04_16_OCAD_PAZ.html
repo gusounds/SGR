@@ -1,0 +1,668 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<p><style type="text/css">
+    /*
+            html {overflow-y: scroll;}
+    
+            body {overflow-y: scroll;}
+    
+            body.modal-open {overflow: hidden; position: fixed; width: 100%; height: 100%;}*/
+            
+            p {
+                font-size: 14px;
+            }
+            /* Transiciones globales */
+            * {
+                transition: all 0.3s ease-in-out;
+            }
+            
+            /* Estilos para los tabs */
+            .tabs {width: 100%; margin: 20px 0;}
+            
+            .tab-buttons {display: block; margin-bottom: 10px;}
+            
+            .tab-button {background: #f0f0f0; border: 1px solid #ccc; padding: 10px 20px; cursor: pointer; position: relative; overflow: hidden; transform: translateY(0); font-weight: 700; color: dimgray; font-size: 16px; padding: 24px 24px;}
+            
+            .tab-button:first-child {border-radius: 8px 0px 0 0;}
+    
+            .tab-button:last-child {border-radius: 0 8px 0px 0;}
+    
+            .tab-button:hover {transform: translateX(2px); box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+            
+            .tab-button:active {transform: translateY(0);}
+            
+            .tab-button.active {background: #fff; border-bottom: 1px solid #fff; color: #2565AF !important;}
+            
+            .tab-content {display: none; border: 1px solid #ccc; padding: 20px; position: relative; top: -11px; border-radius: 0 16px 16px 16px;}
+            
+            .tab-content.active {display: block;}
+            
+            /* Contenedores 100% y 50% */
+            .full-width {width: 100%; margin-bottom: 20px; background-color: white; min-height: 240px;}
+    
+            .full-width img {margin: 32px 0; transition: transform 0.3s ease;}
+            
+            .full-width img:hover {transform: translateY(-2px) rotate(0deg);}
+            
+            .half-width-container {width: 100%; overflow: hidden; margin-bottom: 20px; display: flex;}
+            
+            .half-width {width: 50%; float: left;  background-color: slategray; opacity: .6; min-height: 160px;}
+            
+            .half-width:first-child {margin-right: 0; min-height: 160px; background-color: slategray; opacity: .8;}
+            
+            /* Estilos para el acordeón */
+            .accordion-item {margin-bottom: 5px; font-size: 14px;}
+            
+            .accordion-header {background: var(--blanco); color: var(--azul); padding: 20px 24px; cursor: pointer; border: 1px solid var(--azul2); position: relative; padding-right: 30px; font-weight: 700; font-family: "Nunito Sans", serif; font-size: 18px;}
+            
+            .accordion-item:first-child .accordion-header{border-radius: 0 0 0 0}
+    
+            .accordion-item:last-child .accordion-header {border-radius: 0 0 0 0}
+    
+            .accordion-item:last-child .accordion-header.active {border-radius: 0 0 0 0;}
+    
+            .accordion-header::after {content: '+'; position: absolute;right: 15px; top: 50%; transform: translateY(-50%) rotate(0deg); transition: transform 0.3s ease;}
+            
+            .accordion-header.active::after {transform: translateY(-50%) rotate(45deg);}
+            
+            .accordion-header:hover {background-color: #f6f8f9;}
+            
+            .accordion-content {max-height: 0; overflow: hidden; padding: 0 15px; border: 1px solid #ccc; border-top: none !important; opacity: 0; border-radius: 0 0 10px 10px; border: 1px solid var(--azul2); border-radius: 0 0 20px 20px; background-color: var(--gris);}
+            
+            .accordion-content.active {max-height: fit-content; padding: 0 0; opacity: 1;}
+    
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');    
+    
+    /*Colores SGR*/
+    :root {
+        --azul:#1e5093;
+        --azul2:#29374c;
+        --verde:#277e61;
+        --gris:#f4f4f4;
+        --gris2:#333;
+        --naranja:#277e61;
+        --lila:#6f6aa8;
+        --magenta:#d1267e;
+        --turquesa:#147a96;
+        --blanco:#ffffff;
+    }
+        .azul {
+            color: var(--azul) !important   ;
+        }
+        .azul2 {
+            color:var(--azul2) !important;
+        }
+        .verde {
+            color:var(--verde) !important;
+        }
+        .bold {
+            font-weight: 700 !important;
+        }
+        .black {
+            font-weight: 900 !important;
+        }
+    
+        .d-flex {
+            display: flex !important;
+        }
+        .visor {
+            margin: 64px 0;
+        }
+        .enlaces-interes {
+    
+        }
+        .enlaces-interes .nav-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    
+        .enlaces-interes .nav-table tr {
+                border-bottom: 1px solid #E5E7EB;
+            }
+    
+        .enlaces-interes .nav-table td {
+                padding: 12px 0;
+            }
+        .enlaces-interes table tr td {
+            font-size: 16px;
+        }        
+        .ocadpaz {
+            width: 800px;
+            font-family: "Nunito Sans", serif !important;
+            font-weight: 500;
+        }
+        .ocadpaz h2 {
+            margin: 0 0 32px 0;
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 900;
+            color:var(--azul2);
+        }
+        .ocadpaz p {
+            font-size: 16px;
+            line-height: 18px;
+            color: var(--azul2);
+        }
+        .ocadpaz .nota {
+            font-size: 14px;
+        }
+        .contenedor-bullets {
+        max-width:180px; margin-right: 56px;
+        }
+    
+        .contenedor-bullets .bullet-numero{
+        background-color: var(--azul2);
+        color: var(--blanco);
+        border-radius: 25px;
+        padding: 9px 18px;
+        font-size: 24px;
+        font-weight: 900;
+        margin: 24px 0 0px 0;
+        display: inline-block;
+        }
+    
+        .ocadpaz hr {
+        border-bottom: 0.5px #e4e4e4 solid;
+        width: 40px;
+        margin: 40px 0 0 0;
+        }
+        .info-adicional {
+            background-color: var(--blanco);
+            padding: 24px;
+            filter: drop-shadow(0px 8px 12px #e4e4e4);
+            border-radius: 12px;
+            margin: 32px 0 0 0;
+        }
+        .proyectos-pdet {
+        font-size: 18px !important;
+        min-height: 88px;
+        margin: 12px 0 0 0;
+        }
+        .contenedor-bullets .hr-pdet {
+        width: 24px !important;
+        }
+        .hr-divisor {
+        border-top: none;
+        width: 100% !important; 
+        border-bottom: 1px var(--gris2) dotted !important;
+        margin: 24px 0 48px 0 !important;
+        display: block;
+        }
+        .ocadpaz a {
+         color: var(--azul);
+         text-decoration: underline;
+         transition: all 0.2s ease-in-out;
+         padding: 0.2em 0.1em;
+         user-select: text;
+         white-space: normal;
+         word-wrap: break-word;
+         cursor: pointer;
+         outline: none;
+        }
+        .ocadpaz a:hover {
+            color: var(--gris2);
+            text-decoration-thickness: 2px;
+        }
+        .ocadpaz a:active {
+            color: #002655;
+            transform: translateY(1px);
+        }
+        .ocadpaz a:focus {
+                outline: 2px solid #0056b3;
+                outline-offset: 2px;
+                background-color: rgba(0, 86, 179, 0.1);
+        }
+        .ocadpaz a:focus-visible {
+                outline: 3px solid #0056b3;
+                outline-offset: 3px;
+                text-decoration: none;
+        }
+        .ocadpaz a:visited {
+            color: #6b2fba;
+        }
+        .ocadpaz .iconos-enlaces {
+            width:16px;
+            margin: 0 8px 0 0;
+        }
+        .ocadpaz .icono-informacion {
+            width: 32px;
+            margin: 0 16px 0 0;
+        }
+        .modulo {
+            background-color: #f4f4f4;
+            padding: 48px 48px;
+            margin: 0 0 0 0;
+        }
+        .modtop {
+            border-radius: 20px 20px !important;
+        }
+    
+        .modmiddle {
+            border-radius: 0 0 20px 20px !important;
+        }
+        .productos-ocad {
+            margin-bottom: 24px;
+        }
+        .productos-ocad img {
+            width: 48px;
+            margin: 0 6px 0 0;
+        }
+        .queesocad {
+            font-size: 24px;
+            width: 610px;
+            line-height: 28px;
+        }
+    
+        .inicio-ocad {
+            transition: transform 0.3s ease;
+            margin: 0 0 40px 0;
+        }
+        .inicio-ocad:hover {
+            transform: translateY(-6px) rotate(0deg);
+        }
+        .comillas-ini {
+        width: 29px !important;
+        position: relative;
+        top: -80px;
+        margin-right: 16px
+        }
+        .comillas-fin {
+        width: 29px !important;
+        position: relative;
+        top: 70px;
+        }
+    
+        .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    
+        </style></p>
+    
+    <section class="ocadpaz" style="margin: 0 auto;">
+        <!-- Qué es el OCAD PAZ -->
+        <div class="modulo modtop inicio-ocad">
+            <h2>¿Qué es el <br><span class="verde">OCAD PAZ</span>?</h2>
+            <div class="d-flex">
+                <img class="comillas-ini" src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/comillas-iniciales.svg">
+                <div class="queesocad azul2">
+                    Es el <span class="black verde">Órgano Colegiado de Administración y Decisión para la Paz (OCAD Paz)</span>, responsable de <span class="azul black">aprobar proyectos de inversión</span> que contribuyan a la implementación del <span class="azul black">Acuerdo de Paz</span> y a la <span class="azul black">reparación de víctimas</span>.
+                </div>
+                <img class="comillas-fin" src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/comillas-finales.svg">
+            </div>
+        </div>
+    </section>
+    
+    
+    <div class="accordion" style="width:800px; margin: 0 auto;">
+    
+    
+    <!-- Repetir para los demás items del acordeón -->
+    <div class="accordion-item">
+    <div class="accordion-header black" onclick="toggleAccordion(this)">¿Cómo está conformado el OCAD PAZ?</div>
+    <div class="accordion-content">
+        <section class="ocadpaz">
+        <!-- Cómo está estructurado el ocad paz -->
+        <div class="modulo modmiddle">
+            <img 
+                src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/estructura-del-ocad-paz.svg" 
+                alt="Estructura del OCAD Paz: representantes de tres niveles de gobierno y miembros del Congreso"
+                aria-describedby="ocad-desc"
+                style="max-width:500px;"
+            >
+            <p id="ocad-desc" class="visually-hidden">
+                El Órgano Colegiado de Administración y Decisión (OCAD) Paz está estructurado con representantes de tres niveles gubernamentales y miembros del Congreso, garantizando una representación diversa en la toma de decisiones.
+            </p>
+            <hr>
+            <p><a class="black" href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/MiembrosOCADPAZ.aspx" title="Conozca a los miembros actuales del OCAD Paz">Conozca a los miembros actuales del OCAD Paz</a></p>
+        </div>
+        </section>
+    </div>
+    </div>
+    <!-- Cómo se financia -->
+    <div class="accordion-item">
+    <div class="accordion-header black" onclick="toggleAccordion(this)">¿Cómo se financian los proyectos del OCAD PAZ?</div>
+    <div class="accordion-content">
+    <section class="ocadpaz">
+        <div class="modulo modmiddle">
+            <p style="max-width: 320px;">Estos proyectos se financian con recursos de la <span class="black azul">Asignación para la Paz<sup>1</sup></span> y otras asignaciones:</p>
+            <div class="d-flex">
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">1</span>
+                    <p>Desahorros del fondo Nacional de Pensiones de las Entidades Territoriales (FONPET).</p>
+                </div>
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">2</span>
+                    <p>30% de los rendimientos financieros destinados a incentivar la producción en municipios productores.</p>
+                </div>
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">3</span>
+                    <p>Recursos para infraestructura de transporte clave en la implementación del Acuerdo de Paz.</p>
+                </div>
+            </div>
+            <div class="info-adicional">
+                <p class="black azul"><sup>1</sup>¿Qué es la Asignación para la Paz?</p>
+                <p>Es una fuente de financiación destinada a apoyar iniciativas dentro de los Planes de Acción para la Transformación Regional (PATR) en los 170 municipios con Programas de Desarrollo con Enfoque Territorial (PDET).</p>
+                <p class="nota"><em>(Ley 2056 de 2020 – Art. 57).</em></p>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    
+    <!-- jjj -->
+    <div class="accordion-item">
+    <div class="accordion-header black" onclick="toggleAccordion(this)">Proyectos aprobados en el Bienio 2023-2024</div>
+    <div class="accordion-content">
+        <section class="ocadpaz">
+        <!-- Proyectos aprobados OCAD PAZ -->
+        <div class="modulo modmiddle">
+            <p>Entre el 1 de enero de 2023 y el 31 de diciembre de 2024, el <span class="black verde">OCAD Paz aprobó</span> <span class="black">102 proyectos en dos convocatorias</span>, con una inversión total de <span class="black">$1,14 billones</span>, de los cuales <span class="black">$1,12 billones provienen de la Asignación para la Paz</span>.</p>
+            <p>Estos proyectos buscan cerrar brechas sociales y económicas en los Municipios PDET (Programas de Desarrollo con Enfoque Territorial), teniendo en cuenta sus particularidades y visión de desarrollo.</p>
+            <p><span class="black">El 90% de los recursos se destinaron a Transporte</span> ($428 mil millones, 30 proyectos), <span class="black">Agricultura</span> ($366 mil millones, 29 proyectos) y <span class="black">Vivienda</span> ($218 mil millones, 31 proyectos), como se muestra a continuación en los porcentajes de aprobación por sector.</p>
+    
+            <img 
+                src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/porcentaje-de-ejecucion-ocad-paz-por-sector.svg" 
+                alt="Distribución porcentual de proyectos por sector: Transporte lidera con 38%, seguido por Agricultura 32% y Vivienda 19%"
+                aria-describedby="sectores-desc"
+                style="max-width:100%;"
+            >
+            <p id="sectores-desc" class="visually-hidden">
+                Distribución detallada de proyectos y recursos por sector:
+                Transporte es el sector principal con 30 proyectos y una inversión de 428 mil millones, representando el 38% del total.
+                Agricultura y desarrollo rural sigue con 29 proyectos y 366 mil millones, equivalente al 32%.
+                Vivienda, ciudad y territorio cuenta con 31 proyectos y 218 mil millones, siendo el 19%.
+                Minas y energía tiene 7 proyectos y 58 mil millones, representando el 5%.
+                Educación comprende 3 proyectos y 37 mil millones, con un 3%.
+                Inclusión social y reconciliación cierra con 2 proyectos y 18 mil millones, equivalente al 2% del total.
+            </p>
+            <hr>
+            <p class="nota"><span class="bold">Fuente:</span> Sistema General de Regalías del Departamento Nacional de Planeación, DNP, 2025.</p>
+            <hr class="hr-divisor">
+            <p><span class="black">Destino </span>de los <br><span class="black">recursos aprobados (2023-2024)</span> </p>
+            <p>El <span class="black">80% de los recursos asignados a la paz</span> durante el bienio 2023-2024 se destinan a <span class="black">mejorar la infraestructura, fortalecer la producción rural y promover el desarrollo social</span>. Estos son algunos de los <span class="black">principales logros</span>:</p>
+            <br>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-vias.svg" alt="Imagen decorativa"><p><span class="black">148 km de vías</span> secundarias y terciarias mejoradas.</p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-comercio.svg" alt="Imagen decorativa"><p><span class="black">Más de 7.000 pequeños productores rurales </span>apoyados con <span class="black">activos productivos y de comercialización</span>.</p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-hogar.svg" alt="Imagen decorativa"><p><span class="black">3.218 viviendas </span>con <span class="black">nuevas unidades sanitarias secundarias</span></p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-documentos.svg" alt="Imagen decorativa"><p><span class="black">11 documentos de ordenamiento territorial revisados, actualizados y formulados.</span></p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-acueducto.svg" alt="Imagen decorativa"><p><span class="black">1 acueducto optimizado </span>para mejorar el <span class="black">acceso al agua.</span></p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-educacion.svg" alt="Imagen decorativa"><p><span class="black">459 sedes educativas rurales </span>equipadas con <span class="">mobiliario escolar.</span></p>
+            </div>
+            <div class="productos-ocad d-flex">
+                <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-maestros.svg" alt="Imagen decorativa"><p><span class="black">704 docentes y agentes educativos </span>formados en la <span class="black">cátedra para la paz.</span></p>
+            </div>
+            <div class="info-adicional">
+                <div class="d-flex">
+                    <img class="icono-informacion" src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/icono-informacion.svg">
+                    <p>Estas inversiones mejoran la infraestructura, fortalecen la productividad y aseguran una mayor presencia del Estado en territorios históricamente afectados por la violencia.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    </div>
+    <!-- Distribución -->
+    <div class="accordion-item">
+    <div class="accordion-header black" onclick="toggleAccordion(this)">Distribución de los proyectos por subregión</div>
+    <div class="accordion-content">
+        <section class="ocadpaz">
+        <!-- Distribución por subregión -->
+        <div class="modulo modmiddle">
+            <p><span class="black">14 de las 16 <a href="s#">Subregiones PDET</a> fueron beneficiadas,</span> siendo <span class="black">las cinco de mayor inversión:</span></p>
+            <div class="d-flex">
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">1</span>
+                    <p class="proyectos-pdet"><span class="bold">Pacífico y Frontera Nariñense</span> <br><span class="verde black">14 proyectos</span> <br>($138 mil millones)</p>
+                </div>
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">2</span>
+                    <p class="proyectos-pdet"><span class="bold">Arauca</span> <br><span class="verde black">8 proyectos</span> <br>($115 mil millones)</p>
+                </div>
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">3</span>
+                    <p class="proyectos-pdet"><span class="bold">Cuenca del Caguán y Piedemonte Caqueteño</span> <br><span class="verde black">9 proyectos</span> <br>($111 mil millones)</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">4</span>
+                    <p class="proyectos-pdet"><span class="bold">Putumayo</span> <br><span class="verde black">12 proyectos</span> <br>($111 mil millones)</p>
+                </div>
+                <div class="contenedor-bullets">
+                    <span class="bullet-numero">5</span>
+                    <p class="proyectos-pdet"><span class="bold">Montes de María</span> <br><span class="verde black">8 proyectos</span> <br>($104 mil millones)</p>
+                </div>
+            </div>
+            <hr class="hr-divisor">
+            <p>Número de <span class="black">proyectos <br>aprobados</span> por <span class="black">subregión PDET</span> </p>
+            <img 
+            src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/mapa-distribucion-proyectos-por-subregion-pdet.svg" 
+            alt="Mapa de Colombia: distribución de 102 proyectos en 14 subregiones PDET, destacando Pacífico Nariñense con 14 proyectos como la región más beneficiada"
+            aria-describedby="mapa-pdet-desc"
+            style="max-width:100%;">
+            <p id="mapa-pdet-desc" class="visually-hidden">
+                Distribución detallada de proyectos y recursos por subregión PDET, ordenados por monto de inversión en millones de pesos:
+    
+                Pacífico y Frontera Nariñense: 14 proyectos por 138.370 millones.
+                Arauca: 8 proyectos por 115.322 millones.
+                Cuenca del Caguán y Piedemonte Caqueteño: 9 proyectos por 111.132 millones.
+                Putumayo: 12 proyectos por 111.131 millones.
+                Montes de María: 8 proyectos por 103.990 millones.
+                Alto Patía - Norte del Cauca: 11 proyectos por 94.958 millones.
+                Macarena - Guaviare: 6 proyectos por 90.552 millones.
+                Sierra Nevada - Perijá: 10 proyectos por 89.715 millones.
+                Chocó: 8 proyectos por 77.500 millones.
+                Sur de Bolívar: 7 proyectos por 68.963 millones.
+                Catatumbo: 5 proyectos por 68.320 millones.
+                Sur de Córdoba: 1 proyecto por 23.818 millones.
+                Pacífico Medio: 2 proyectos por 20.929 millones.
+                Bajo Cauca y Nordeste Antioqueño: 1 proyecto por 11.714 millones.
+    
+                En total, son 102 proyectos distribuidos en las 14 subregiones PDET.
+            </p>
+        </div>
+        </section>
+    </div>
+    </div>
+    <!-- Nueva convocatoria -->
+    <div class="accordion-item">
+    <div class="accordion-header black" onclick="toggleAccordion(this)"><span class="verde">¡Nuevo!</span> Primera convocatoria del OCAD PAZ (Bienio 2025-2026)</div>
+    <div class="accordion-content">
+        <section class="ocadpaz">
+        <!-- Distribución por subregión -->
+        <div class="modulo modmiddle">
+            <p></p>
+        </div>
+        </section>
+    </div>
+    </div>
+    </div>
+    
+    <section class="ocadpaz visor" style="margin: 64px auto 0 auto;">
+        <div>
+            <h2>Visor OCAD PAZ</h2>
+            <p>El tablero de datos a continuación, <span class="black">permite consultar el estado de todo los proyectos del OCAD PAZ</span> en cada municipio y departamento, garantizando el acceso a información transparente y actualizada.</p>
+            <p>Es posible filtrar por departamento y municipio para conocer en qué estado se encuentra cada proyecto, ya sea sin contratar, en ejecución o terminado. Esta herramienta facilita el seguimiento a la inversión de los recursos y el impacto de los proyectos en las regiones priorizadas.</p>
+            <div>
+                <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZjY2M2I4ZDAtYWVmYS00M2VlLTgzOTktZDQxZTc2NWUxOTFhIiwidCI6IjA0MjYwZTIwLTIzNGMtNGM5Zi1hOWRkLTc5Mjg2YjFiNzBhYyIsImMiOjR9" allowfullscreen="true" width="800" height="600" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="ocadpaz enlaces-interes" style="margin: 64px auto 0 auto;">
+        <div>
+            <h2>Enlaces de interés, OCAD PAZ</h2>
+            <p>
+                <table class="nav-table bold">
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/NormativaOCADPAZ.aspx" class="nav-link" title="Normativa OCAD PAZ">Normativa</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/Convocatorias.aspx" class="nav-link" title="Convocatorias OCAD PAZ">Convocatorias</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/ProyectosPostuladosconvocatoria20252026.aspx" class="nav-link" title="Primera convocatoria del OCAD PAZ (Bienio 2025-2026)">Primera convocatoria del OCAD PAZ (Bienio 2025-2026)</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/Proyectospostuladosconvocatoria2.aspx" class="nav-link" title="Convocatoria 2 OCAD PAZ">Convocatoria 2</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/Proyectospostuladosconvocatoria1.aspx" class="nav-link" title="Convocatoria 1 OCAD PAZ">Convocatoria 1</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=dztqvUmQLo4%3d&tabid=444" class="nav-link" title="Metodología para la priorización de proyectos de inversión a ser financiados con la Asignación Paz y desahorro del Fondo Nacional de Pensiones de las Entidades Territoriales – FONPET" target="black">Metodología para la priorización de proyectos</a></td>
+                    </tr>
+<!--                     <tr>
+                        <td><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normatividad/Anexo-No-1-Actualizado-resolucion-1860.pdf" title="Plan de convocatorias" class="nav-link" target="_blank">Plan de convocatorias</a></td>
+                    </tr> -->
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Proyectos/Verificaci%C3%B3ndeRequisitos.aspx" class="nav-link" title="Verificación de Requisitos">Verificación de requisitos</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Inversion/Proyectos_Aprobados_OCAD_PAZ_Sesion_77.xlsx" class="nav-link" title="Descargue la Base de Proyectos Aprobados" target="_blank">Descargue la Base de Proyectos Aprobados</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/MiembrosOCADPAZ.aspx" class="nav-link" title="Miembros del OCAD PAZ">Miembros</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.sgr.gov.co/Inversi%C3%B3n/OCADPAZ/SesionesOCADPAZ.aspx" class="nav-link" title="Sesiones OCAD PAZ">Sesiones</a></td>
+                    </tr>
+                </table>
+            </p>
+    
+        </div>
+    </section>
+    
+    <script>
+            // Función para manejar los tabs
+            function openTab(evt, tabId) {
+                var i, tabContent, tabButtons;
+                
+                // Ocultar todos los contenidos de tabs
+                tabContent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabContent.length; i++) {
+                    tabContent[i].className = tabContent[i].className.replace(" active", "");
+                }
+                
+                // Desactivar todos los botones
+                tabButtons = document.getElementsByClassName("tab-button");
+                for (i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+                }
+                
+                // Mostrar el tab actual y activar el botón
+                document.getElementById(tabId).className += " active";
+                evt.currentTarget.className += " active";
+            }
+    
+            function toggleAccordion(element) {
+                var content = element.nextElementSibling;
+                var isActive = content.classList.contains('active');
+                
+                // Primero, remover todas las clases active
+                var allHeaders = document.getElementsByClassName("accordion-header");
+                var allContents = document.getElementsByClassName("accordion-content");
+                for (var i = 0; i < allContents.length; i++) {
+                    allContents[i].classList.remove('active');
+                    allHeaders[i].classList.remove('active');
+                }
+                
+                // Si no estaba activo, activarlo
+                if (!isActive) {
+                    // Obtener la posición actual del header antes de abrir el contenido
+                    var headerOffset = element.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    // Activar el contenido
+                    content.classList.add('active');
+                    element.classList.add('active');
+                    
+                    // Scroll inmediato a la posición del header
+                    window.scrollTo({
+                        top: headerOffset - 20, // 20px de margen superior para mejor visualización
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        </script>      <!-- Script Modal -->     <script>
+            // Función para abrir el modal
+            function openModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    // Calcular el ancho del scrollbar
+                    var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                    
+                    modal.style.display = 'block';
+                    setTimeout(function() {
+                        modal.classList.add('active');
+                        modal.querySelector('.modal').classList.add('active');
+                        
+                        // Agregar padding-right al body igual al ancho del scrollbar
+                        document.body.style.paddingRight = scrollbarWidth + 'px';
+                        document.body.style.overflow = 'hidden';
+                    }, 10);
+                }
+            }
+    
+            // Función para cerrar el modal
+                function closeModal(modalId) {
+                    var modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.remove('active');
+                        modal.querySelector('.modal').classList.remove('active');
+                        
+                        setTimeout(function() {
+                            modal.style.display = 'none';
+                            // Restaurar el padding y el overflow
+                            document.body.style.paddingRight = '';
+                            document.body.style.overflow = '';
+                        }, 300);
+                    }
+                }
+    
+            // Función para manejar la acción principal del modal
+            function handleModalAction(modalId) {
+                // Aquí puedes agregar la lógica específica para cada modal
+                console.log('Acción ejecutada para el modal:', modalId);
+                closeModal(modalId);
+            }
+    
+            // Cerrar modal al hacer clic fuera
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal-overlay')) {
+                    closeModal(event.target.id);
+                }
+            }
+    
+            // Cerrar modal con la tecla ESC
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    var modals = document.getElementsByClassName('modal-overlay');
+                    for (var i = 0; i < modals.length; i++) {
+                        if (modals[i].style.display === 'block') {
+                            closeModal(modals[i].id);
+                        }
+                    }
+                }
+            });
+        </script>
