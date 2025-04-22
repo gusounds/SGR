@@ -22191,6 +22191,7 @@ a.DNPSimplebutton {
 
 .DNPPlaneacion-item-select:nth-child(2) {
   margin-bottom: 4px; /*SGR 2025*/
+  padding-right: 30px; /*SGR 2025*/
 }
 
 @media screen and (min-width: 600px) and (max-width: 1200px) {
