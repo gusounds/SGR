@@ -122,88 +122,88 @@
     <script crossorigin="anonymous" src="./Normativa_files/webchat.js"></script><meta name="react-scroll-to-bottom:version" content="4.2.0"><meta name="react-film" content="version=3.1.1-main.df870ea"><meta name="botframework-directlinespeech:version" content="4.17.0"><meta name="botframework-directlinespeech" content="version=4.17.0; build_tool=tsup; format=esmodules"><meta name="web-speech-cognitive-services" content="version=7.1.3"><meta name="botframework-webchat:api" content="version=4.17.0; build-tool=tsup; module-format=esmodules"><meta name="botframework-webchat:bundle" content="version=4.17.0; variant=full; build-tool=tsup; module-format=esmodules"><meta name="botframework-webchat:component" content="version=4.17.0; build-tool=tsup; module-format=esmodules"><meta name="botframework-webchat:core" content="version=4.17.0; build-tool=tsup; module-format=esmodules"><meta name="botframework-webchat:bundle:variant" content="full"><meta name="botframework-webchat:bundle:version" content="4.17.0"><meta name="botframework-webchat:core:version" content="4.17.0"><meta name="botframework-webchat:ui:version" content="4.17.0">
     <script type="text/javascript" src="./Normativa_files/sp.ui.dialog.js"></script><script type="text/javascript" src="./Normativa_files/strings.js"></script><script type="text/javascript" src="./Normativa_files/filter_dropdown_dnp.js"></script><script type="text/javascript" src="./Normativa_files/control_refinement_buscador_dnp.js"></script><script type="text/javascript" src="./Normativa_files/control_searchbox_dnp.js"></script><script type="text/javascript" src="./Normativa_files/item_commonitem_body.js"></script><script type="text/javascript" src="./Normativa_files/item_buscador_dnp_normativa.js"></script><script type="text/javascript" src="./Normativa_files/resultados_buscador_dnp.js"></script><script type="text/javascript" src="./Normativa_files/group_default.js"></script><script type="text/javascript" src="./Normativa_files/item_default.js"></script><script type="text/javascript" src="./Normativa_files/item_site.js"></script><script type="text/javascript" src="./Normativa_files/item_word.js"></script><script type="text/javascript" src="./Normativa_files/item_powerpoint.js"></script><script type="text/javascript" src="./Normativa_files/item_person_compacthorizontal.js"></script><script type="text/javascript" src="./Normativa_files/item_bestbet.js"></script><script type="text/javascript" src="./Normativa_files/item_webpage.js"></script><script>"use strict";
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+// function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+// function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+// function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+// function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function refresh() {
-  ReactDOM.unmountComponentAtNode(document.getElementById('webchat'));
-  generateKey().then(function (key) {
-    encryptKey(key, generarID()).then(function (ciphertext) {
-      decryptMessagex(ciphertext).then(function (decrypted) {
-        var dec = new TextDecoder();
-        var _window$React = window.React,
-            useMemo = _window$React.useMemo,
-            useState = _window$React.useState;
-        var _window$WebChat = window.WebChat,
-            createDirectLine = _window$WebChat.createDirectLine,
-            createStore = _window$WebChat.createStore,
-            ReactWebChat = _window$WebChat.ReactWebChat;
+// function refresh() {
+//   ReactDOM.unmountComponentAtNode(document.getElementById('webchat'));
+//   generateKey().then(function (key) {
+//     encryptKey(key, generarID()).then(function (ciphertext) {
+//       decryptMessagex(ciphertext).then(function (decrypted) {
+//         var dec = new TextDecoder();
+//         var _window$React = window.React,
+//             useMemo = _window$React.useMemo,
+//             useState = _window$React.useState;
+//         var _window$WebChat = window.WebChat,
+//             createDirectLine = _window$WebChat.createDirectLine,
+//             createStore = _window$WebChat.createStore,
+//             ReactWebChat = _window$WebChat.ReactWebChat;
 
-        var App = function App() {
-          var _useState = useState(navigator.language),
-              _useState2 = _slicedToArray(_useState, 2),
-              locale = _useState2[0],
-              setLocale = _useState2[1];
+//         var App = function App() {
+//           var _useState = useState(navigator.language),
+//               _useState2 = _slicedToArray(_useState, 2),
+//               locale = _useState2[0],
+//               setLocale = _useState2[1];
 
-          var directLine = useMemo(function () {
-            return createDirectLine({
-              token: token
-            });
-          }, []);
-          var store = useMemo(function () {
-            return createStore({}, function () {
-              return function (next) {
-                return function (action) {
-                  //console.log(action);//PARA DEGUG ESTA LINEA
-                  if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
-                    var _action$payload$activ = action.payload.activity,
-                        role = _action$payload$activ.from.role,
-                        text = _action$payload$activ.text,
-                        type = _action$payload$activ.type; //console.log(role); 
-                    //console.log(type);
-                    //console.log(text);
+//           var directLine = useMemo(function () {
+//             return createDirectLine({
+//               token: token
+//             });
+//           }, []);
+//           var store = useMemo(function () {
+//             return createStore({}, function () {
+//               return function (next) {
+//                 return function (action) {
+//                   //console.log(action);//PARA DEGUG ESTA LINEA
+//                   if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
+//                     var _action$payload$activ = action.payload.activity,
+//                         role = _action$payload$activ.from.role,
+//                         text = _action$payload$activ.text,
+//                         type = _action$payload$activ.type; //console.log(role); 
+//                     //console.log(type);
+//                     //console.log(text);
 
-                    if (role === 'bot' && type === 'message' && (text === 'en-US' || text === 'ja-JP' || text === 'zh-HK')) {
-                      setLocale(text);
-                    }
-                  }
+//                     if (role === 'bot' && type === 'message' && (text === 'en-US' || text === 'ja-JP' || text === 'zh-HK')) {
+//                       setLocale(text);
+//                     }
+//                   }
 
-                  if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
-                    setTimeout(applyButtonStyle, 100);
-                  }
+//                   if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
+//                     setTimeout(applyButtonStyle, 100);
+//                   }
 
-                  return next(action);
-                };
-              };
-            });
-          }, []);
-          return React.createElement(ReactWebChat, {
-            directLine: directLine,
-            locale: locale,
-            userID: dec.decode(decrypted),
-            username: myUser.name,
-            store: store,
-            styleOptions: styleOptions
-          });
-        };
+//                   return next(action);
+//                 };
+//               };
+//             });
+//           }, []);
+//           return React.createElement(ReactWebChat, {
+//             directLine: directLine,
+//             locale: locale,
+//             userID: dec.decode(decrypted),
+//             username: myUser.name,
+//             store: store,
+//             styleOptions: styleOptions
+//           });
+//         };
 
-        window.ReactDOM.render(React.createElement(App, null), document.getElementById('webchat'));
-        document.querySelector('#webchat > *').focus();
-      }).catch(function (error) {
-        console.error('Error desencriptando:', error);
-      });
-    }).catch(function (error) {
-      console.error('Error encriptando:', error);
-    });
-  }).catch(function (error) {
-    console.error('Error encriptando:', error);
-  });
-}
+//         window.ReactDOM.render(React.createElement(App, null), document.getElementById('webchat'));
+//         document.querySelector('#webchat > *').focus();
+//       }).catch(function (error) {
+//         console.error('Error desencriptando:', error);
+//       });
+//     }).catch(function (error) {
+//       console.error('Error encriptando:', error);
+//     });
+//   }).catch(function (error) {
+//     console.error('Error encriptando:', error);
+//   });
+// }
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImh0dHBzOi8vd3d3LmRucC5nb3YuY28vanMvd2ViQ2hhdFJlZnJlc2guanMiXSwibmFtZXMiOlsicmVmcmVzaCIsIlJlYWN0RE9NIiwidW5tb3VudENvbXBvbmVudEF0Tm9kZSIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJnZW5lcmF0ZUtleSIsInRoZW4iLCJrZXkiLCJlbmNyeXB0S2V5IiwiZ2VuZXJhcklEIiwiY2lwaGVydGV4dCIsImRlY3J5cHRNZXNzYWdleCIsImRlY3J5cHRlZCIsImRlYyIsIlRleHREZWNvZGVyIiwid2luZG93IiwiUmVhY3QiLCJ1c2VNZW1vIiwidXNlU3RhdGUiLCJXZWJDaGF0IiwiY3JlYXRlRGlyZWN0TGluZSIsImNyZWF0ZVN0b3JlIiwiUmVhY3RXZWJDaGF0IiwiQXBwIiwibmF2aWdhdG9yIiwibGFuZ3VhZ2UiLCJsb2NhbGUiLCJzZXRMb2NhbGUiLCJkaXJlY3RMaW5lIiwidG9rZW4iLCJzdG9yZSIsIm5leHQiLCJhY3Rpb24iLCJ0eXBlIiwicGF5bG9hZCIsImFjdGl2aXR5Iiwicm9sZSIsImZyb20iLCJ0ZXh0Iiwic2V0VGltZW91dCIsImFwcGx5QnV0dG9uU3R5bGUiLCJkZWNvZGUiLCJteVVzZXIiLCJuYW1lIiwic3R5bGVPcHRpb25zIiwicmVuZGVyIiwicXVlcnlTZWxlY3RvciIsImZvY3VzIiwiY2F0Y2giLCJlcnJvciIsImNvbnNvbGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFDQSxTQUFTQSxPQUFULEdBQW1CO0FBQ2pCQyxFQUFBQSxRQUFRLENBQUNDLHNCQUFULENBQWdDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsU0FBeEIsQ0FBaEM7QUFDQUMsRUFBQUEsV0FBVyxHQUNSQyxJQURILENBQ1EsVUFBQ0MsR0FBRCxFQUFTO0FBQ2ZDLElBQUFBLFVBQVUsQ0FBQ0QsR0FBRCxFQUFLRSxTQUFTLEVBQWQsQ0FBVixDQUNFSCxJQURGLENBQ08sVUFBQ0ksVUFBRCxFQUFnQjtBQUNwQkMsTUFBQUEs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LENBbURPLFVBQUNDLEtBQUQsRUFBVztBQUNoQkMsTUFBQUEsT0FBTyxDQUFDRCxLQUFSLENBQWMsb0JBQWQsRUFBb0NBLEtBQXBDO0FBQ0EsS0FyREY7QUFzREEsR0F4REYsRUF5REdELEtBekRILENBeURTLFVBQUNDLEtBQUQsRUFBVztBQUNqQkMsSUFBQUEsT0FBTyxDQUFDRCxLQUFSLENBQWMsb0JBQWQsRUFBb0NBLEtBQXBDO0FBQ0YsR0EzREQ7QUE0REMiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuZnVuY3Rpb24gcmVmcmVzaCgpIHtcclxuXHRcdFJlYWN0RE9NLnVubW91bnRDb21wb25lbnRBdE5vZGUoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3dlYmNoYXQnKSk7XHJcblx0XHRnZW5lcmF0ZUtleSgpXHJcblx0XHQgIC50aGVuKChrZXkpID0+IHtcclxuXHRcdFx0IGVuY3J5cHRLZXkoa2V5LGdlbmVyYXJJRCgpKVxyXG5cdFx0XHQgIC50aGVuKChjaXBoZXJ0ZXh0KSA9PiB7XHJcblx0XHRcdCAgICBkZWNyeXB0TWVzc2FnZXgoY2lwaGVydGV4dClcclxuXHRcdFx0ICAgICAudGhlbigoZGVjcnlwdGVkKSA9PiB7XHJcblx0XHRcdFx0ICAgbGV0IGRlYyA9IG5ldyBUZXh0RGVjb2RlcigpO1xyXG5cdFx0XHRcdCAgIFxyXG5cdFx0XHRcdCAgICBjb25zdCB7IHVzZU1lbW8sIHVzZVN0YXRlIH0gPSB3aW5kb3cuUmVhY3Q7XHJcblx0XHRcdFx0XHRjb25zdCB7IGNyZWF0ZURpcmVjdExpbmUsIGNyZWF0ZVN0b3JlLCBSZWFjdFdlYkNoYXQgfSA9IHdpbmRvdy5XZWJDaGF0O1xyXG5cdFx0XHRcdFx0XHJcblx0XHRcdFx0XHQgIGNvbnN0IEFwcCA9ICgpID0+IHtcclxuXHRcdFx0XHRcdCAgY29uc3QgW2xvY2FsZSwgc2V0TG9jYWxlXSA9IHVzZVN0YXRlKG5hdmlnYXRvci5sYW5ndWFnZSk7XHJcblx0XHRcdFx0XHQgIGNvbnN0IGRpcmVjdExpbmUgPSB1c2VNZW1vKCgpID0+IGNyZWF0ZURpcmVjdExpbmUoeyB0b2tlbiB9KSwgW10pO1xyXG5cdFx0XHRcdFx0ICBjb25zdCBzdG9yZSA9IHVzZU1lbW8oXHJcblx0XHRcdFx0XHRcdCgpID0+XHJcblx0XHRcdFx0XHRcdCAgY3JlYXRlU3RvcmUoe30sICgpID0+IG5leHQgPT4gYWN0aW9uID0+IHtcclxuXHRcdFx0XHRcdFx0XHQvL2NvbnNvbGUubG9nKGFjdGlvbik7Ly9QQVJBIERFR1VHIEVTVEEgTElORUFcclxuXHRcdFx0XHRcdFx0XHRpZiAoYWN0aW9uLnR5cGUgPT09ICdESVJFQ1RfTElORS9JTkNPTUlOR19BQ1RJVklUWScpIHtcclxuXHRcdFx0XHRcdFx0XHQgIGNvbnN0IHtcclxuXHRcdFx0XHRcdFx0XHRcdGFjdGl2aXR5OiB7XHJcblx0XHRcdFx0XHRcdFx0XHQgIGZyb206IHsgcm9sZSB9LFxyXG5cdFx0XHRcdFx0XHRcdFx0XHR0ZXh0LFxyXG5cdFx0XHRcdFx0XHRcdFx0XHR0eXBlXHJcblx0XHRcdFx0XHRcdFx0XHR9XHJcblx0XHRcdFx0XHRcdFx0ICB9ID0gYWN0aW9uLnBheWxvYWQ7XHJcblx0XHRcdFx0XHRcdFx0Ly9jb25zb2xlLmxvZyhyb2xlKTsgXHJcblx0XHRcdFx0XHRcdFx0Ly9jb25zb2xlLmxvZyh0eXBlKTtcclxuXHRcdFx0XHRcdFx0XHQvL2NvbnNvbGUubG9nKHRleHQpO1xyXG5cdFx0XHRcdFx0XHRcdGlmIChcclxuXHRcdFx0XHRcdFx0XHRcdHJvbGUgPT09ICdib3QnICYmXHJcblx0XHRcdFx0XHRcdFx0XHR0eXBlID09PSAnbWVzc2FnZScgJiZcclxuXHRcdFx0XHRcdFx0XHRcdCh0ZXh0ID09PSAnZW4tVVMnIHx8IHRleHQgPT09ICdqYS1KUCcgfHwgdGV4dCA9PT0gJ3poLUhLJylcclxuXHRcdFx0XHRcdFx0XHQgICkge1xyXG5cdFx0XHRcdFx0XHRcdFx0c2V0TG9jYWxlKHRleHQpO1xyXG5cdFx0XHRcdFx0XHRcdCAgfVxyXG5cdFx0XHRcdFx0XHRcdH1cclxuXHRcdFx0XHRcdFx0XHRpZihhY3Rpb24udHlwZSA9PT0gJ0RJUkVDVF9MSU5FL0lOQ09NSU5HX0FDVElWSVRZJyl7XHJcblx0XHRcdFx0XHRcdFx0XHRzZXRUaW1lb3V0KGFwcGx5QnV0dG9uU3R5bGUsIDEwMCk7XHJcblx0XHRcdFx0XHRcdFx0fVxyXG5cdFx0XHRcdFx0ICAgcmV0dXJuIG5leHQoYWN0aW9uKTtcclxuXHRcdFx0XHRcdFx0ICB9KSxcclxuXHRcdFx0XHRcdFx0W11cclxuXHRcdFx0XHRcdCAgKTtcclxuXHRcdFx0XHRcdCAgcmV0dXJuIDxSZWFjdFdlYkNoYXQgZGlyZWN0TGluZT17ZGlyZWN0TGluZX0gbG9jYWxlPXtsb2NhbGV9IHVzZXJJRD17ZGVjLmRlY29kZShkZWNyeXB0ZWQpfSB1c2VybmFtZT17bXlVc2VyLm5hbWV9IHN0b3JlPXtzdG9yZX0gc3R5bGVPcHRpb25zPXtzdHlsZU9wdGlvbnN9IC8+O1xyXG5cdFx0XHRcdFx0fTtcclxuXHRcdFx0XHRcdHdpbmRvdy5SZWFjdERPTS5yZW5kZXIoPEFwcCAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3dlYmNoYXQnKSk7XHJcblx0XHRcdFx0XHRkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjd2ViY2hhdCA+IConKS5mb2N1cygpO1xyXG5cdFx0XHQgICB9KVxyXG5cdFx0XHQgIC5jYXRjaCgoZXJyb3IpID0+IHtcclxuXHRcdFx0XHRjb25zb2xlLmVycm9yKCdFcnJvciBkZXNlbmNyaXB0YW5kbzonLCBlcnJvcik7XHJcblx0XHRcdFx0fSk7XHJcblx0XHRcdCB9KVxyXG5cdFx0XHQgLmNhdGNoKChlcnJvcikgPT4ge1xyXG5cdFx0XHQgICBjb25zb2xlLmVycm9yKCdFcnJvciBlbmNyaXB0YW5kbzonLCBlcnJvcik7XHJcblx0XHRcdCAgfSk7XHJcblx0XHRcdH0pXHJcblx0XHQgIC5jYXRjaCgoZXJyb3IpID0+IHtcclxuXHRcdCAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGVuY3JpcHRhbmRvOicsIGVycm9yKTtcclxuXHRcdH0pO1xyXG4gIH0iXX0=</script><style data-emotion="webchat--css-geknv" data-s=""></style><style data-emotion="react-scroll-to-bottom--css-snixy" data-s=""></style><script type="text/javascript" src="./Normativa_files/core.js"></script><link href="./Normativa_files/widget_lazy.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="./Normativa_files/mquery.js"></script><script type="text/javascript" src="./Normativa_files/sp.core.js"></script><script type="text/javascript" src="./Normativa_files/sp.js"></script><script type="text/javascript" src="./Normativa_files/sp.publishing.js"></script><link href="./Normativa_files/widget_base.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="./Normativa_files/clienttemplates.js"></script><script type="text/javascript" src="./Normativa_files/inplview.js"></script></head>
 <body class=" ms-backgroundImage">
 
