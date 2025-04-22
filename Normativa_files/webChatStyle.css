@@ -1,0 +1,307 @@
+﻿/*Actualizacion aÃ±o 2023, Desarrollado para la OAC del DNP
+
+Marco andrey Romero Acosta - Marromero@DNP.gov.co
+https://marcoandrey.netlify.app/
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+:root {
+  --color-primary: #3366cc;
+}
+
+body {
+  margin: 0px;
+  font-size: 14px !important;
+}
+#chatRetail {
+  right: 320px;
+}
+
+.chat-ventana {
+  position: fixed;
+  height: 87vh;
+  bottom: -1210px;
+  right: 90px;
+  left: auto;
+  top: auto;
+  z-index: 1050;
+  border: 3px solid #f9f9fb;
+  background-color: #f9f9fb;
+  width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ddd;
+  background: #fff;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.chat-ventana.open {
+  bottom: 90px;
+  right: 120px;
+}
+
+.chat-ventana .chat-encabezado {
+  background-color: #e6effd;
+  padding: 16px 16px 0 26px;
+  height: 8vh;
+}
+
+.chat-ventana .chat-titulo {
+  color: rgb(76, 98, 223);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+  font: 16px/1 sans-serif;
+  margin-top: 10px;
+  font-weight: 600;
+  float: left;
+}
+
+.chatbot-launcher {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+.chatbot-launcher-button-open{
+	background-color: transparent; 
+    border: none; 
+    padding: 0;
+}
+
+.chatbot-launcher-button-close {
+  background-color: #e6effd;
+}
+
+.chatbot-launcher .Image_asistente {
+  width: 100%;
+
+}
+
+.chatbot-launcher .Image_close {
+  width: 20px;
+  height: 20px;
+}
+
+.webchat {
+  height: 74vh;
+}
+
+.webchat > div {
+  height: 78vh;
+}
+.webchat > div > div > div > div {
+  background-color: #f9f9fb;
+  flex: none;
+  display: none;
+}
+.webchat > div > div {
+  background-color: #f9f9fb;
+}
+
+.webchat .css-7xorrq {
+  background: url(https://s3-eu-west-1.amazonaws.com/flowxo-messenger/icons/dmf9b8);
+  background-size: contain;
+  text-indent: -500px;
+  background-color: transparent !important;
+  overflow: hidden;
+}
+
+.webchat .content > .row > .bubble {
+  border: none;
+  border-radius: 10px;
+}
+
+.webchat .content > .row > .bubble.from-user {
+  background-color: rgb(76, 98, 223);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.webchat .css-1r4fa22 ul li button {
+  border-radius: 7px;
+  border-color: rgb(76, 98, 223);
+  color: rgb(76, 98, 223);
+  background: transparent;
+}
+
+.webchat .main svg path {
+  fill: rgb(76, 98, 223);
+}
+
+.chat-ventana .chat-encabezado-boton {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  font-family: montserratbold, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", sans-serif;
+  color: rgb(76, 98, 223);
+  z-index: 1051;
+  cursor: pointer;
+  float: right;
+  font-weight: 700;
+  min-width: 2em;
+}
+
+.chat-ventana .btn-Minim {
+  padding: 0;
+  margin-top: 8px;
+}
+
+.chat-ventana .btn-Act {
+  padding: 0;
+  margin-right: 16px;
+}
+
+.chat-ventana #btn-Cerrar {
+  margin-right: -20px;
+}
+.chat-encabezado-imagen {
+  height: auto;
+  width: 22%;
+  object-fit: cover;
+}
+
+button.custom-button {
+  color: var(--color-primary) !important;
+  -webkit-transition: all 0.3s 0s ease-in-out;
+  -moz-transition: all 0.3s 0s ease-in-out;
+  -o-transition: all 0.3s 0s ease-in-out;
+  transition: all 0.3s 0s ease-in-out;
+  border-color: white !important;
+  border-radius: 0.5em !important;
+  font-family: "Work Sans", "Calibri", "Helvetica Neue", arial, sans-serif;
+}
+
+button.custom-button:hover {
+  color: white !important;
+  cursor: pointer !important;
+  background-color: var(--color-primary) !important;
+  cursor: pointer !important;
+}
+button.custom-button[aria-pressed="true"] {
+  color: white !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  border-color: white !important;
+}
+
+.ac-textBlock {
+  color: black !important;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .chat-ventana.open {
+    bottom: 80px;
+    right: 120px;
+  }
+  .chatbot-launcher {
+    bottom: 80px;
+    right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .chat-ventana.open {
+    bottom: 60px;
+    right: 100px;
+  }
+  .chatbot-launcher {
+    bottom: 60px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #chatRetail {
+    right: 0px;
+  }
+  .chat-ventana {
+    width: 100vw;
+    height: 88vh;
+  }
+
+  .chat-ventana.open {
+    bottom: 120px;
+    right: 0;
+  }
+
+  .chatbot-launcher {
+    bottom: 70px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat-ventana .btn-Minim {
+    padding: 0;
+    margin-top: 24px;
+  }
+  
+  .chat-ventana .btn-Act {
+    padding: 0;
+    margin-right: 16px;
+    margin-top: 16px;
+  }
+
+  .chat-encabezado-imagen {
+    width: 24%;
+    margin-top: 12px;
+  }
+
+  .chat-ventana .chat-encabezado {
+    height: 9vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #chatRetail {
+    right: 0px;
+  }
+  .chat-ventana {
+    width: 100vw;
+    height: 88vh;
+  }
+
+  .chat-ventana.open {
+    bottom: 110px;
+    right: 0;
+  }
+
+  .chatbot-launcher {
+    bottom: 60px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat-ventana .btn-Minim {
+    padding: 0;
+    margin-top: 18px;
+  }
+  
+  .chat-ventana .btn-Act {
+    padding: 0;
+    margin-right: 16px;
+    margin-top: 10px;
+  }
+/* 
+  .chat-ventana .chat-encabezado-boton {
+    width: 56px;
+    height: 56px;
+  } */
+
+  .chat-encabezado-imagen {
+    width: 40%;
+    margin-top: 6px;
+  }
+}

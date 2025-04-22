@@ -1,0 +1,4 @@
+﻿.DNPNav-menu-item-submenu:before{
+  background-image: var(--data-before);
+  background-size: cover;
+}

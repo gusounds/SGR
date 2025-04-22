@@ -1,0 +1,141 @@
+﻿/*Mod Govco*/
+
+body{
+	overflow:auto
+}
+
+#s4-workspace{	overflow:unset;}
+
+.DNPHeader-brand-search div{
+	position:relative;
+}
+
+.DNPHeader-brand-search input[type=button]{
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMTYgMTYnIGZpbGw9JyNmZmYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZmlsbC1ydWxlPSdldmVub2RkJyBkPSdNMTAuNDQyIDEwLjQ0MmExIDEgMCAwIDEgMS40MTUgMGwzLjg1IDMuODVhMSAxIDAgMCAxLTEuNDE0IDEuNDE1bC0zLjg1LTMuODVhMSAxIDAgMCAxIDAtMS40MTV6Jy8+PHBhdGggZmlsbC1ydWxlPSdldmVub2RkJyBkPSdNNi41IDEyYTUuNSA1LjUgMCAxIDAgMC0xMSA1LjUgNS41IDAgMCAwIDAgMTF6TTEzIDYuNWE2LjUgNi41IDAgMSAxLTEzIDAgNi41IDYuNSAwIDAgMSAxMyAweicvPjwvc3ZnPg==);
+	background-repeat:no-repeat;
+	background-position:50%;
+	border:none;
+	color:#fff;
+	cursor:pointer;
+	background-color:#36c;
+	font-size:0;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	bottom:0;
+	margin:auto;
+	width:25px;
+	background-size:14px;
+	height:25px;
+	right:4px;
+	min-width:0;
+	padding:0;
+}
+
+button.DNPNav-button{
+	min-width:0;
+	padding:0;
+	background-color:transparent;
+}
+
+.DNPNews-more-select-text{
+	margin-bottom:0;	
+}
+
+
+.DNPFooter-info-data-text {
+    margin-bottom: inherit;
+    line-height: initial;
+}
+
+.DNPFooter-info-title {
+    margin: 0;
+}
+/*Marco Romero start*/
+.DNPSlider input[type=button]:hover, .DNPDocs-arrow:hover {
+    background-color: #e6effd;
+}
+
+.DNPDocs-arrow:hover {
+    background-color: transparent;
+}
+
+.DNPSlider input[type=button]:focus, .DNPSlider button:focus,  .DNPDocs-arrow:focus {
+	outline: inherit;
+	background-color: transparent;
+}
+/*Marco Romero end*/
+.DNPMedia-info-text{
+	margin: inherit;
+}
+
+.DNPDrop-title{
+	margin: 0;
+}
+
+.DNPDrop-agenda-element-date-day, .DNPDrop-agenda-element-date-month, .DNPDrop-button-text {
+	margin: inherit;
+}
+
+/* MODIFICACIONES */
+
+#contentRow{
+	padding:0;
+}
+
+.s4-wpcell > .ms-webpart-chrome, .s4-wpActive > .ms-webpart-chrome {
+    border: 0;
+}
+
+#s4-bodyContainer{
+	padding-bottom:0;
+}
+
+#contentBox {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 100%;
+}
+
+.ms-webpartzone-cell {
+    margin: 0;
+}
+
+div[data-name="ContentPlaceHolderMain"] {
+    background: #fff;
+    padding: 0;
+}
+#homeslider div.carousel-inner div.carousel-item{
+	height: 441px !important;
+}
+#ms-designer-ribbon img, .ms-dlgContent .ms-dlgCloseBtnImg {
+    max-width: inherit;
+}
+#ms-designer-ribbon *, .ms-dlgContent * {
+    box-sizing: content-box;
+}
+.ms-core-listMenu-horizontalBox > .ms-core-listMenu-root > .ms-listMenu-editLink{
+	display:none;
+}
+#suiteBar .ms-core-brandingText, #suiteBar .ms-core-suiteLink, #welcomeMenuBox .ms-core-menu-root{
+	font-size: 0.85em;
+}
+.breadcrumb {margin: 0rem; padding: .2rem 1rem; border-radius: 0 0 .4rem .4rem;; background-color: #D13B3B;}
+.breadcrumb-item a {color: #fff; font-weight: bold;}
+.breadcrumb-item, .breadcrumb-item.active {color: #fff; font-size: 0.6rem;}
+.breadcrumb-item+.breadcrumb-item::before {color: #fff;}
+
+
+ul.root.ms-core-listMenu-root.static li.static.dynamic-children:nth-child(5) ul.dynamic li.dynamic:nth-child(1) span, ul.root.ms-core-listMenu-root.static li.static.dynamic-children:nth-child(5) ul.dynamic li.dynamic:nth-child(6) span, ul.root.ms-core-listMenu-root.static li.static.dynamic-children:nth-child(5) ul.dynamic li.dynamic:nth-child(11) span{
+	text-align: center;
+	font-weight: bold;
+}
+
+#s4-ribbonrow{
+	
+	z-index:1;
+}
+
+
+
+/* Fin modificaciones */
