@@ -10,25 +10,25 @@
       },
       "fechas": [
         {
-          "fecha": "2025-02-18",
+          "fecha": "2025-05-12",
           "estado": "active",
           "url": "https://www.sgr.gov.co/boletin-24-enero",
           "tipo": "boletin-sar"
         },
         {
-          "fecha": "2025-02-20",
+          "fecha": "2025-05-13",
           "estado": "active",
           "url": "https://www.sgr.gov.co/rendicion-cuentas",
           "tipo": "rendicion-cuentas"
         },
         {
-          "fecha": "2025-02-21",
+          "fecha": "2025-05-14",
           "estado": "disabled",
           "url": null,
           "tipo": "asistencia-tecnica"
         },
         {
-          "fecha": "2025-02-17",
+          "fecha": "2025-05-15",
           "estado": "active",
           "url": "#",
           "tipo": "asistencia-tecnica-territorial"

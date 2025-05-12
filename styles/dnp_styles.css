@@ -458,7 +458,7 @@ a:visited {
 
 .DNPHeader-brand-search input[type="submit"],
 .DNPHeader-brand-search input[type="button"] {
-  background-image: url("../assets/search_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/search_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -1252,27 +1252,27 @@ a:visited {
 }
 
 .DNPFooter-info-social-element.tw:before {
-  background-image: url("../assets/tw_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/tw_icon.svg");
 }
 
 .DNPFooter-info-social-element.ig:before {
-  background-image: url("../assets/ig_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/ig_icon.svg");
 }
 
 .DNPFooter-info-social-element.fb:before {
-  background-image: url("../assets/fb_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/fb_icon.svg");
 }
 
 .DNPFooter-info-social-element.in:before {
-  background-image: url("../assets/in_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/in_icon.svg");
 }
 
 .DNPFooter-info-social-element.yt:before {
-  background-image: url("../assets/yt_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/yt_icon.svg");
 }
 
 .DNPFooter-info-social-element.tk:before {
-  background-image: url("../assets/tk_icon.svg");
+  background-image: url("https://www.dnp.gov.co/assets/tk_icon.svg");
 }
 
 .DNPFooter-info-social-link {
