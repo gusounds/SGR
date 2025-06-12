@@ -1,0 +1,638 @@
+<p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet" /></p>
+    <p><style type="text/css">
+    /*
+            html {overflow-y: scroll;}
+    
+            body {overflow-y: scroll;}
+    
+            body.modal-open {overflow: hidden; position: fixed; width: 100%; height: 100%;}*/
+            
+            p {
+                font-size: 14px;
+            }
+            /* Transiciones globales */
+            * {
+                transition: all 0.3s ease-in-out;
+            }
+            
+            /* Estilos para los tabs */
+            .tabs {width: 100%; margin: 20px 0;}
+            
+            .tab-buttons {display: block; margin-bottom: 10px;}
+            
+            .tab-button {background: #f0f0f0; border: 1px solid #ccc; padding: 10px 20px; cursor: pointer; position: relative; overflow: hidden; transform: translateY(0); font-weight: 700; color: dimgray; font-size: 16px; padding: 24px 24px;}
+            
+            .tab-button:first-child {border-radius: 8px 0px 0 0;}
+
+            .tab-button:last-child {border-radius: 0 8px 0px 0;}
+
+            .tab-button:hover {transform: translateX(2px); box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
+            
+            .tab-button:active {transform: translateY(0);}
+            
+            .tab-button.active {background: #fff; border-bottom: 1px solid #fff; color: #2565AF !important;}
+            
+            .tab-content {display: none; border: 1px solid #ccc; padding: 20px; position: relative; top: -11px; border-radius: 0 16px 16px 16px;}
+            
+            .tab-content.active {display: block;}
+            
+            /* Contenedores 100% y 50% */
+            .full-width {width: 100%; margin-bottom: 20px; background-color: white; min-height: 240px;}
+
+            .full-width img {margin: 32px 0; transition: transform 0.3s ease;}
+            
+            .full-width img:hover {transform: translateY(-2px) rotate(0deg);}
+            
+            .half-width-container {width: 100%; overflow: hidden; margin-bottom: 20px; display: flex;}
+            
+            .half-width {width: 50%; float: left;  background-color: slategray; opacity: .6; min-height: 160px;}
+            
+            .half-width:first-child {margin-right: 0; min-height: 160px; background-color: slategray; opacity: .8;}
+            
+            /* Estilos para el acordeón */
+            .accordion-item {margin-bottom: 5px; font-size: 14px;}
+            
+            .accordion-header {background: var(--blanco); color: var(--azul); padding: 20px 24px; cursor: pointer; border: 1px solid var(--azul2); position: relative; padding-right: 30px; font-weight: 700; font-family: "Nunito Sans", serif; font-size: 17px;}
+            
+            .accordion-item:first-child .accordion-header{border-radius: 0 0 0 0}
+
+            .accordion-item:last-child .accordion-header {border-radius: 0 0 0 0}
+
+            .accordion-item:last-child .accordion-header.active {border-radius: 0 0 0 0;}
+
+            .accordion-header::after {content: '+'; position: absolute;right: 15px; top: 50%; transform: translateY(-50%) rotate(0deg); transition: transform 0.3s ease;}
+            
+            .accordion-header.active::after {transform: translateY(-50%) rotate(45deg);}
+            
+            .accordion-header:hover {background-color: #f6f8f9;}
+            
+            .accordion-content {max-height: 0; overflow: hidden; padding: 0 15px; border: 1px solid #ccc; border-top: none !important; opacity: 0; border-radius: 0 0 10px 10px; border: 1px solid var(--azul2); border-radius: 0 0 20px 20px; background-color: var(--gris);}
+            
+            .accordion-content.active {max-height: fit-content; padding: 0 0; opacity: 1;}
+
+            @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');    
+
+            /*Colores SGR*/
+            :root {
+                --azul:#1e5093;
+                --azul2:#29374c;
+                --verde:#277e61;
+                --gris:#f4f4f4;
+                --gris2:#333;
+                --naranja:#277e61;
+                --lila:#6f6aa8;
+                --magenta:#d1267e;
+                --turquesa:#147a96;
+                --blanco:#ffffff;
+            }
+            .azul {
+                color: var(--azul) !important   ;
+            }
+            .azul2 {
+                color:var(--azul2) !important;
+            }
+            .verde {
+                color:var(--verde) !important;
+            }
+            .bold {
+                font-weight: 700 !important;
+            }
+            .black {
+                font-weight: 900 !important;
+            }
+
+            .d-flex {
+                display: flex !important;
+            }
+            .visor {
+                margin: 64px 0;
+            }
+            .enlaces-interes {
+
+            }
+            .enlaces-interes .nav-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .enlaces-interes .nav-table tr {
+                border-bottom: 1px solid #E5E7EB;
+            }
+
+            .enlaces-interes .nav-table td {
+                padding: 12px 0;
+            }
+            .enlaces-interes table tr td {
+                font-size: 16px;
+            }        
+            .ocadpaz {
+                width: 800px;
+                font-family: "Nunito Sans", serif !important;
+                font-weight: 500;
+            }
+            .ocadpaz h2 {
+                margin: 0 0 32px 0;
+                font-size: 24px;
+                line-height: 40px;
+                font-weight: 900;
+                color:var(--azul2);
+            }
+            .ocadpaz p {
+                font-size: 16px;
+                line-height: 18px;
+                color: var(--azul2);
+                margin: auto 0;
+            }
+            .ocadpaz .iconos img {
+                margin-right: 12px;
+                width: 56px;
+            }
+            .ocadpaz .lista-bullets {
+                margin-left: 48px;
+                font-size: 16px !important;
+                margin-top: -10px;
+            }
+            .ocadpaz .nota {
+                font-size: 14px;
+            }
+            .contenedor-bullets {
+                max-width:180px; margin-right: 56px;
+            }
+
+            .contenedor-bullets .bullet-numero{
+                background-color: var(--azul2);
+                color: var(--blanco);
+                border-radius: 25px;
+                padding: 9px 18px;
+                font-size: 24px;
+                font-weight: 900;
+                margin: 24px 0 0px 0;
+                display: inline-block;
+            }
+
+            .ocadpaz hr {
+                border-bottom: 0.5px #e4e4e4 solid;
+                width: 40px;
+                margin: 40px 0 24px 0;
+                border-left:none;
+                border-right: none;
+            }
+            .info-adicional {
+                background-color: var(--blanco);
+                padding: 24px;
+                filter: drop-shadow(0px 8px 12px #e4e4e4);
+                border-radius: 12px;
+                margin: 32px 0 0 0;
+            }
+            .proyectos-pdet {
+                font-size: 18px !important;
+                min-height: 88px;
+                margin: 12px 0 0 0;
+            }
+            .contenedor-bullets .hr-pdet {
+                width: 24px !important;
+            }
+            .hr-divisor {
+                border-top: none;
+                width: 100% !important; 
+                border-bottom: 1px var(--gris2) dotted !important;
+                margin: 24px 0 48px 0 !important;
+                display: block;
+            }
+            .ocadpaz a {
+               color: var(--azul);
+               text-decoration: underline;
+               transition: all 0.2s ease-in-out;
+               padding: 0.2em 0.1em;
+               user-select: text;
+               white-space: normal;
+               word-wrap: break-word;
+               cursor: pointer;
+               outline: none;
+           }
+           .ocadpaz a:hover {
+            color: var(--gris2);
+            text-decoration-thickness: 2px;
+        }
+        .ocadpaz a:active {
+            color: #002655;
+            transform: translateY(1px);
+        }
+        .ocadpaz a:focus {
+            outline: 2px solid #0056b3;
+            outline-offset: 2px;
+            background-color: rgba(0, 86, 179, 0.1);
+        }
+        .ocadpaz a:focus-visible {
+            outline: 3px solid #0056b3;
+            outline-offset: 3px;
+            text-decoration: none;
+        }
+        .ocadpaz a:visited {
+            color: #6b2fba;
+        }
+        .ocadpaz .iconos-enlaces {
+            width:16px;
+            margin: 0 8px 0 0;
+        }
+        .ocadpaz .icono-informacion {
+            width: 32px;
+            margin: 0 16px 0 0;
+        }
+        .modulo {
+            background-color: #f4f4f4;
+            padding: 48px 48px;
+            margin: 0 0 0 0;
+        }
+        .modtop {
+            border-radius: 20px 20px !important;
+        }
+
+        .modmiddle {
+            border-radius: 0 0 20px 20px !important;
+        }
+        .productos-ocad {
+            margin-bottom: 24px;
+        }
+        .productos-ocad img {
+            width: 48px;
+            margin: 0 6px 0 0;
+        }
+        .queesocad {
+            font-size: 18px;
+            width: 610px;
+            line-height: 22px;
+        }
+
+        .inicio-ocad {
+            transition: transform 0.3s ease;
+            margin: 0 0 40px 0;
+        }
+        .inicio-ocad:hover {
+            transform: translateY(-6px) rotate(0deg);
+        }
+        .comillas-ini {
+            width: 29px !important;
+            position: relative;
+            top: -100px;
+            margin-right: 16px
+        }
+        .comillas-fin {
+            width: 29px !important;
+            position: relative;
+            top: 100px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+    </style></p>
+    <p><section class="ocadpaz" style="margin: 0 auto;">
+        <div class="modulo modtop inicio-ocad">
+            <h2>¡Participar vale! Las regalías se vigilan <span class="verde">entre todos</span></h2>
+            <div class="d-flex"><img class="comillas-ini" src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/comillas-iniciales.svg" alt="" />
+                <div class="queesocad azul2">La <span class="azul black">participación ciudadana y el control social</span> son derechos que fortalecen la transparencia, la eficiencia del gasto público y la <span class="azul black">relación entre el Estado y la ciudadanía.</span><br><br>
+                A través del seguimiento a los proyectos financiados con regalías, se promueve una gestión abierta, informada y con beneficios reales para los territorios.</div>
+                <img class="comillas-fin" src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/img_subsitio_2025/comillas-finales.svg" alt="" /></div>
+            </div>
+        </section></p>
+
+        <div class="accordion" style="width:800px; margin: 0 auto;">
+            <!-- ítem 1 -->
+            <div class="accordion-item">
+                <div class="accordion-header black" onclick="toggleAccordion(this)">
+                    Metodologías SGR de participación y control social
+                </div>
+                <div class="accordion-content">
+                    <section class="ocadpaz">
+                        <!-- Cómo está estructurado el ocad paz -->
+                        <div class="modulo modmiddle">
+                            <p>Documentos orientadores con enfoques y herramientas para ciudadanía, entidades ejecutoras y profesionales del SGR.</p><br><br>
+
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-participacion.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Participación y Control Social en el seguimiento SGR (2024)
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Vigilancia/Metodologia_PC_CS_Unificada_DSEC.pdfs" title="Descargue la metodología orientadora">Metodología orientadora</a></li>
+                            </ul>
+
+                            <br>
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-gobierno.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Rendición de cuentas (2012–2016)
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=joUAsAEhtQw%3d&tabid=237" target="_blank" title="Descargue la infografía con de Auditorías Visibles">Auditorías visibles</li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=IDigx5DPqzw%3d&tabid=237" target="_blank" title="Descargue infografía de mesas técnicas participativas">Mesas técnicas participativas</li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=Ue8hRSDh1DY%3d&tabid=237" target="_blank" title="Desgargue inforgrafía de comités de obra participativos">Comités de obra participativos</li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=2vUeKiaG-EY%3d&tabid=237" target="_blank" title="Descargue la infografía con el resumen de todas las metodologías">Resumen de todas las metodologías</a></li>
+                            </ul>
+
+                            <br>
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-auditoria.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Auditorías ciudadanas autónomas (2017)
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=y4RUYQwgECs%3d&tabid=465" target="_blank" title="Descargue la Metodología de Auditorías Ciudadanas">Diseño metodológico</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=TuDSdHFu0oM%3d&tabid=465" target="_blank" title="Descargue la cartilla: Las Auditorías: Una forma de vigilar las regalías">Cartilla digital</a></li>
+                                <li><a href="https://www.sgr.gov.co/Vigilancia/ControlSocial/ResultadosdeControlSocial/Auditor%C3%ADasCiudadanasAut%C3%B3nomas/VideosAuditoriaCiudadana.aspx" title="Ir a los videos de Auditoría Ciudadana">Videos orientadores</a></li>
+                            </ul>
+
+                            <br>
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-modelo.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Modelo de participación ciudadana (2015)
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=pZAXNuSAEjA%3d&tabid=464" target="_blank" title="Descargue el documento: Modelo de Participación Ciudadana en el Ciclo de Proyectos de Inversión">Antecedentes (Auditorias Visibles Ciudadanas - 2015)</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=fDZsAItrxxU%3d&tabid=464" target="_blank" title="Descargue el Modelo de Participación Ciudadana en el Ciclo de Proyectos de Inversión">Documento metodológico</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=m2Je-imwJfE%3d&tabid=464" target="_blank" title="Descargue el Plan de Implementación del Modelo de Participación Ciudadana en el Ciclo de Proyectos de Inversión">Plan de implementación</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=vHVN5Fg0Jvg%3d&tabid=464" target="_blank" title="Descargue la Metodología de Evaluación del Modelo de Participación Ciudadana en el Ciclo de Proyectos de Inversión">Metodología de evaluación</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=P22V61Sgy1I%3d&tabid=464" target="_blank" title="Descargue el documento: Lanzamiento Prueba Piloto Modelo de Participación Ciudadana - MPC">Lanzamiento del piloto</a></li>
+                                <li><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=-S87y_soRaI%3d&tabid=464" target="_blank" title="Descargue el MODELO DE PARTICIPACIÓN CIUDADANA -MPC-">Balance de resultados</a></li>
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- ítem 2 -->
+            <div class="accordion-item">
+                <div class="accordion-header black" onclick="toggleAccordion(this)">
+                    Ruta Autónoma Ciudadana para seguimiento a proyectos
+                </div>
+                <div class="accordion-content">
+                    <section class="ocadpaz">
+                        <!-- Cómo está estructurado el ocad paz -->
+                        <div class="modulo modmiddle">
+                            <p>Guía práctica con tres pasos para que la ciudadanía haga control social informado a los proyectos financiados con regalías.</p><br><br>
+
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-lupa.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Gestion_conocimiento/PPT_Ruta_Autonoma_Ciudadana_Rev27Nov24.pdf " target="_blank" title="Descargue la presentación con la Ruta Autónoma Ciudadana (RAC)">Ruta Autónoma Ciudadana (RAC)</a>
+                                    </strong>
+                                </p>
+                            </div>
+                            <ol class="lista-bullets">
+                                <li><p>Fortalecer capacidades para el ejercicio ciudadano</p></li>
+                                <li><p>Hacer seguimiento a proyectos de interés</p></li>
+                                <li><p>Activar otras acciones</p></li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- ítem 3 -->
+            <div class="accordion-item">
+                <div class="accordion-header black" onclick="toggleAccordion(this)">
+                    Auditores Ciudadanos: controle y participe en línea
+                </div>
+                <div class="accordion-content">
+                    <section class="ocadpaz">
+                        <!-- Cómo está estructurado el ocad paz -->
+                        <div class="modulo modmiddle">
+                            <p>Aplicativo del DNP que permite hacer seguimiento y aportar observaciones ciudadanas a proyectos del SGR.</p><br><br>
+
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-auditores-ciudadanos.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Enlaces importantes
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><p><a href="https://auditoresciudadanos.dnp.gov.co/" target="_blank">Ir al aplicativo Auditores Ciudadanos</a></p></li>
+                                <li><p><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=s3eM00HpkmQ%3d&tabid=541" target="_blank">Infografía explicativa (PDF)</a></p></li>
+                                <li><p><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Vigilancia/Manual_del_usuario_del_aplicativo_Auditores_Ciudadanos_V_2.1.pdf" target="_blank">Manual de usuario (PDF)</a></p></li>
+                            </ul>
+
+                            <br>
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-video.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Videos
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><p><a href="https://youtu.be/FjBNn-w-JB4" target="_blank">¿Cómo acceder al aplicativo?</a></p></li>
+                                <li><p><a href="https://youtu.be/_EGCh9FhNsA" target="_blank">¿Cómo registrarse?</a></p></li>
+                                <li><p><a href="https://youtu.be/ZgGEryNfk88" target="_blank">¿Qué son los aportes ciudadanos?</a></p></li>
+                                <li><p><a href="https://youtu.be/JMSeVLqbWTQ" target="_blank">¿Cómo participar con aportes?</a></p></li>
+                                <li><p><a href="https://youtu.be/Dmuaipz1OQE" target="_blank">¿Cuál es el paso a paso?</a></p></li>
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- ítem 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header black" onclick="toggleAccordion(this)">
+                    Canales oficiales para radicar PQRSD
+                </div>
+                <div class="accordion-content">
+                    <section class="ocadpaz">
+                        <!-- Cómo está estructurado el ocad paz -->
+                        <div class="modulo modmiddle">
+                            <p>Si desea reportar hechos positivos o situaciones a mejorar en los proyectos SGR, puede hacerlo a través de los siguientes canales del DNP:</p><br><br>
+
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-pqrsd.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Peticiones, Quejas, Reclamos, Solicitudes o Denuncias
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><p>Sitio web: <a href="https://pqrsd.dnp.gov.co/" target="_blank">www.pqrsd.dnp.gov.co</a></p></li>
+                                <li><p>Correo: <a href="mailto:servicioalciudadano@dnp.gov.co" target="_blank">servicioalciudadano@dnp.gov.co</a></p></li>
+                                <li><p>Teléfono: +57 601 381 50 00</p></li>
+                            </ul>
+
+                            <br>
+                            <div class="d-flex iconos">
+                                <img src="imgs/icono-auditores-ciudadanos.svg" alt="Imagen decorativa">
+                                <p>
+                                    <strong>
+                                        Aportes ciudadanos desde el aplicativo Auditores Ciudadanos
+                                    </strong>
+                                </p>
+                            </div>
+                            <ul class="lista-bullets">
+                                <li><p>Consulte el <a href="https://auditoresciudadanos.dnp.gov.co" target="_blank">proyecto de interés</a></p></li>
+                                <li><p>Haga seguimiento desde su perfil</p></li>
+                                <li><p>Aporte individual o cree un grupo auditor</p></li>
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- ítem 4 -->
+            <div class="accordion-item">
+                <div class="accordion-header black" onclick="toggleAccordion(this)">
+                    Jornadas virtuales sobre participación y control social
+                </div>
+                <div class="accordion-content">
+                    <section class="ocadpaz">
+                        <!-- Cómo está estructurado el ocad paz -->
+                        <div class="modulo modmiddle">
+                            <p>Acceda a las jornadas de transferencia de conocimiento realizadas por el DNP sobre control social en el SGR.</p><br><br>
+                            <ul style="font-size: 16px; margin-top: -10px;">
+                                <li><p>Jornada 24/oct/2023: <a href="https://www.youtube.com/live/usvptdqdxCI?si=RgrRsV_orH67dFbe " target="_blank">Ver grabación</a></p></li>
+                                <li><p>Jornada 21/nov/2023:<a href="https://www.youtube.com/watch?v=qNlEyx-FnwY " target="_blank">Ver grabación</a></p></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Función para manejar los tabs
+            function openTab(evt, tabId) {
+                var i, tabContent, tabButtons;
+                
+                // Ocultar todos los contenidos de tabs
+                tabContent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabContent.length; i++) {
+                    tabContent[i].className = tabContent[i].className.replace(" active", "");
+                }
+                
+                // Desactivar todos los botones
+                tabButtons = document.getElementsByClassName("tab-button");
+                for (i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+                }
+                
+                // Mostrar el tab actual y activar el botón
+                document.getElementById(tabId).className += " active";
+                evt.currentTarget.className += " active";
+            }
+
+            function toggleAccordion(element) {
+                var content = element.nextElementSibling;
+                var isActive = content.classList.contains('active');
+                
+                // Primero, remover todas las clases active
+                var allHeaders = document.getElementsByClassName("accordion-header");
+                var allContents = document.getElementsByClassName("accordion-content");
+                for (var i = 0; i < allContents.length; i++) {
+                    allContents[i].classList.remove('active');
+                    allHeaders[i].classList.remove('active');
+                }
+                
+                // Si no estaba activo, activarlo
+                if (!isActive) {
+                    // Obtener la posición actual del header antes de abrir el contenido
+                    var headerOffset = element.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    // Activar el contenido
+                    content.classList.add('active');
+                    element.classList.add('active');
+                    
+                    // Scroll inmediato a la posición del header
+                    window.scrollTo({
+                        top: headerOffset - 20, // 20px de margen superior para mejor visualización
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        </script>      <!-- Script Modal -->     <script>
+            // Función para abrir el modal
+            function openModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    // Calcular el ancho del scrollbar
+                    var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                    
+                    modal.style.display = 'block';
+                    setTimeout(function() {
+                        modal.classList.add('active');
+                        modal.querySelector('.modal').classList.add('active');
+                        
+                        // Agregar padding-right al body igual al ancho del scrollbar
+                        document.body.style.paddingRight = scrollbarWidth + 'px';
+                        document.body.style.overflow = 'hidden';
+                    }, 10);
+                }
+            }
+
+            // Función para cerrar el modal
+            function closeModal(modalId) {
+                var modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('active');
+                    modal.querySelector('.modal').classList.remove('active');
+
+                    setTimeout(function() {
+                        modal.style.display = 'none';
+                            // Restaurar el padding y el overflow
+                        document.body.style.paddingRight = '';
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+            }
+
+            // Función para manejar la acción principal del modal
+            function handleModalAction(modalId) {
+                // Aquí puedes agregar la lógica específica para cada modal
+                console.log('Acción ejecutada para el modal:', modalId);
+                closeModal(modalId);
+            }
+
+            // Cerrar modal al hacer clic fuera
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal-overlay')) {
+                    closeModal(event.target.id);
+                }
+            }
+
+            // Cerrar modal con la tecla ESC
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    var modals = document.getElementsByClassName('modal-overlay');
+                    for (var i = 0; i < modals.length; i++) {
+                        if (modals[i].style.display === 'block') {
+                            closeModal(modals[i].id);
+                        }
+                    }
+                }
+            });
+        </script></p>
