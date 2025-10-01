@@ -1,0 +1,483 @@
+
+<style>
+
+.tab-container {
+font-family: "Nunito Sans", serif !important;
+    font-weight: 500;
+  width: 880px;
+  margin: 0 auto;
+}
+
+.tab-container h2 {
+  margin: 0 0;
+  padding-top: 20px;
+}
+
+/* Contenedor de pestañas: distribuye el ancho equitativamente */
+.tab-labels {
+  display: flex;
+  width: 100%;
+/*  border-bottom: 2px solid #ccc;*/
+}
+
+/* Pestañas activas */
+.tab-labels label {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  background: #f2f2f2;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-right: 1px solid #ddd;
+}
+
+.tab-labels label {
+  transition: all 0.2s;
+}
+
+.tab-labels label:last-child {
+  border-right: none;
+}
+
+.tab-labels label:hover,
+.tab-labels label:focus {
+  background: #e0e0e0;
+}
+
+/* Pestaña activa */
+input[type="radio"]:checked + label {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #3366cc;
+  font-weight: bold;
+}
+/* Pestañas deshabilitadas */
+.tab-labels .tab-disabled {
+  flex: 1;
+  text-align: center;
+  padding: 20px 16px 15px 16px;
+  font-weight: bold;
+  background: #e0e0e0;
+  color: #888;
+  user-select: none;
+  cursor: not-allowed;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-right: 1px solid #ddd;
+  opacity: 0.6;
+  font-size: 16px;
+}
+.tab-labels .tab-disabled:last-child {
+  border-right: none;
+}
+
+/* Ocultar radios correctamente */
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.tab-labels label {
+    padding: 20px 16px 25px 16px;
+    color: #3366cc;
+    border-top: 1px solid #EBEFFC;
+    border-left: 1px solid #EBEFFC;
+    border-right: 1px solid #EBEFFC;
+    border-bottom: 2px solid #EBEFFC;   
+    border-radius: 0 0;
+    background-color: #fff;
+    font-size: 15px;
+}
+.tab-labels label:hover {
+  background-color: #004884;
+  color: #fff;
+}
+
+/* Contenido de pestañas */
+.tab-content {
+  display: none;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #f4f4f4;
+}
+
+/* Mostrar solo el contenido del tab seleccionado */
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2,
+#tab3:checked ~ .content3,
+#tab4:checked ~ .content4 {
+  display: block;
+}
+
+/* Estilo personalizado de pestaña activa */
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"],
+#tab4:checked ~ .tab-labels label[for="tab4"] {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-bottom: 2px solid #3366cc !important;
+  font-weight: bold;
+}
+
+.convocatorias-ocad { width:100%; text-align:left; color: #fff;}
+.convocatorias-ocad tbody {color: #000;}
+.convocatorias-ocad tbody tr td {padding: 8px 8px;}
+.convocatorias-ocad tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+.convocatorias-ocad tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+.convocatorias-ocad th {background-color: #2f3f56; padding: 8px 8px;}
+.convocatorias-ocad tr {background-color: #e5ecf8; padding: 8px 8px;}
+.convocatorias-ocad .col-1 {width: 55%}
+.convocatorias-ocad .col-2 {width: 15%}
+.convocatorias-ocad .col-3 {width: 20%}
+.convocatorias-ocad .col-4 {width: 20%}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My UTF-8 Encoded Page</title>
+</head>
+
+<div class="tab-container">
+
+  <!-- Radios ocultos -->
+  <input type="radio" id="tab1" name="tabs" />
+  <input type="radio" id="tab2" name="tabs" checked />
+  <input type="radio" id="tab3" name="tabs" />
+  <input type="radio" id="tab4" name="tabs" />
+
+  <!-- Etiquetas de pestañas -->
+<div class="tab-labels">
+
+    <label for="tab1">Primera convocatoria</label>
+    <label for="tab2">Segunda convocatoria</label>
+    <label for="tab3">Tercera convocatoria</label>
+    <label style="border-right: 1px solid #EBEFFC;" for="tab4">Cuarta convocatoria</label>
+
+</div>
+
+  <!-- Contenido de pestañas activas -->
+      <div class="tab-content content1">
+
+
+    <a href="/LinkClick.aspx?fileticket=ba3dOWJfFjE%3d&amp;tabid=702"><img src="https://www.sgr.gov.co/Portals/0/OcadPaz/banner-convocatoria-ocad-paz-2025-2026-2025-06-11.jpg" alt="Collage de una indígena colombiana con el texto: Primera convocatoria OCAD PAZ para el bienio 2025-2026" width="840" /></a>
+    <p>&#160;</p>
+    <p style="font-size: 16px;">Consulte la <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/modificacion-terminos-de-referencia-convocatorias-2-3-y-4-ocad-paz-bienio-2025-2026.pdf" target="_blank" title="Consultar modificación términos de referencia de las convocatorias OCAD PAZ 2, 3 y 4 del Bienio 2025-2026">Modificación de términos de referencia de las convocatorias 2, 3 y 4 del Bienio 2025-2026</a></p>
+    <h2 style="font-size: 20px;"><strong>Etapa 2 - Revisión de condiciones habilitantes de los proyectos presentados a la primera convocatoria OCAD Paz bienio 2025-2026</strong></h2>
+    <h3 style="font-size: 18px;"><strong><span style="color:4571af;">Ampliación de plazo para cumplimiento de requisitos</span></strong></h3>
+    <p><img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/PublishingImages/ampliacion-plazo-cumplimiento-requisitos%E2%80%93convocatoria-2025-2026.svg" alt="" role="presentation" /></p>
+    <p>&#160;</p>
+    <p>&#160;</p>
+    <p><strong style="font-size: 16px;">La etapa de cumplimiento de requisitos de la primera convocatoria del bienio 2025-2026 se <span style="color:4571af;">amplió hasta el 17 de septiembre</span> de 2025. Con esta medida, se otorgan <span style="color:4571af;">10 días hábiles adicionales</span> a los interesados.</strong></p>
+    <p>&#160;</p>
+    <p>&#160;</p>
+    <hr style="border-bottom: none;   border-color: #666 !important;" />
+    <p>&#160;</p>
+    <p>&#160;</p>
+    <p style="font-size: 14px">Del 27 de mayo al 12 de junio de 2025.</p>
+    <ol> <!--     <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;">Comunicado de prensa</span></span></p>
+        </li> -->
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/listado-revision-condiciones-habilitantes-proyectos-convocatoria-1-ocad-paz-2025-2026.pdf" name="Listado de Revisión de Condiciones Habilitantes de los proyectos postulados a la primera convocatoria OCAD PAZ del Bienio 2025-2026" target="_blank">Listado revisión de condiciones habilitantes</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/resultado-subsanaciones-convocatoria-1-ocad-paz-2025-2026.pdf" target="_blank" name="Publicación del Resultado de Subsanaciones, Convocatoria 1 del Bienio 2025-2026, OCAD Paz">Listado del resultado de subsanaciones</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/publicacion-revision-subsanacines-primera-convocatoria-ocad-paz-bienio-2025-2026.pdf" target="_blank" name="Alcance a la publicación de revisión de subsanaciones, Convocatoria 1 del Bienio 2025-2026, OCAD Paz">Alcance a la publicación de revisión de subsanaciones</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/alcance-publicacion-revision-subsanaciones-convocatoria-1-ocad-paz-bienio-2025-2026.pdf" target="_blank" title="Consulte el documento: Alcance publicación de revisión de subsanaciones" name="Consulte el documento: Alcance publicación de revisión de subsanaciones">Alcance publicación de revisión de subsanaciones</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/listado-elegibles-convocatoria-1-ocad-paz-bienio-2025-2026.pdf" target="_blank" title="Consulte la publicación Listado de Elegibles" name="Consulte la publicación Listado de Elegibles ">Publicación Listado de Elegibles</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/anexo-evaluacion-tecnica-convocatoria-1-ocad-paz-bienio-2025-2026.xlsx" target="_blank" title="Descargue el anexo evaluación técnica Listado de Elegibles" name="Descargue el anexo evaluación técnica Listado de Elegibles">Anexo evaluación técnica Listado de Elegibles</a></span></span></p>
+        </li>
+    </ol>
+    <h2 style="font-size: 20px;"><strong><br />
+    Etapa 1 - postulación de proyectos</strong></h2>
+    <p style="font-size: 14px">Consulte aquí todos los recursos necesarios para participar en la <strong>primera convocatoria del OCAD Paz para el bienio 2025–2026.</strong> <br />
+    <br />
+    Encontrará guías, formatos, términos de referencia, acceso al sistema de postulación (SIIAT), simuladores y otros documentos clave para estructurar y presentar su proyecto.</p>
+    <ol>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normativa/resolucion-0655-2025-03-03.pdf" target="_blank" title="Resolución 0655 - Anexo 1: Plan de convocatorias asignación para la paz del Sistema General de Regalías Bienio 2025-2026">Resolución 0655 - Anexo 1: Plan de convocatorias asignación para la paz del Sistema General de Regalías Bienio 2025-2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://www.sgr.gov.co/LinkClick.aspx?fileticket=Vo2zUuy7dVc%3D&tabid=694&mid=1827" target="_blank" title="Anexo 1: Plan de convocatorias asignación para la paz del sistema general de regalías bienio 2025 – 2026">1.1. Anexo 1: Plan de convocatorias asignación para la paz del sistema general de regalías bienio 2025 – 2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normativa/anexo-tecnico-adenda-1-resolucion-0655-2025-03-03.pdf" target="_blank" title="Adenda 1: Plan de convocatorias asignación para la paz del sistema general de regalías bienio 2025 – 2026">1.1.1. Adenda 1: Plan de convocatorias asignación para la paz del sistema general de regalías bienio 2025 – 2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normativa/anexo-tecnico-adenda-2-resolucion-0655-2025-08-20.pdf" target="_blank" title="Adenda 2: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026">1.1.2. Adenda 2: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normativa/anexo-tecnico-adenda-3-resolucion-0655-2025-09-03.pdf" target="_blank" title="Adenda 3: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026">1.1.3. Adenda 3: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/Normativa/anexo-tecnico-adenda-4-resolucion-0655-2025-09-15.pdf" target="_blank" title="Adenda 4: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026">1.1.4. Adenda 4: Por la cual se establece el Plan de Convocatorias para la distribución de los recursos de la Asignación para la Paz del Sistema General de Regalías durante el bienio 2025-2026</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/terminos-referencia-convocatoria-2025-2026.pdf" target="_blank">Términos de Referencia de la Primera convocatoria OCAD PAZ Bienio 2025-2026</a></span></span></p>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/adenda-1-terminos-referencia-2025-09-01.pdf" target="_blank" title="Adenda 1 - Términos de Referencia, septiembre 2 de 2025">2.1. Adenda 1 - Términos de Referencia</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/comunicado-convocatoria-ocad-paz-2025-04-22.pdf" target="_blank">Comunicado de prensa</a>.</span></span></p>
+        </li>
+        <li>
+        <p><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/guia-postulacion-proyectos-ocad-paz-2025.pdf"><span style="font-family: Verdana;"><span style="font-size: small;">Guía práctica para la postulación de proyectos</span></span></a><span style="font-family: Verdana;"> -&#160; <span style="font-size: small;">Primera convocatoria OCAD PAZ Bienio 2025-2026</span> <br />
+        </span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/guia-creacion-usuario-siiat-radicacion-documentos-convocatoria-ocad-paz-2025-2026.pdf" target="_blank" title="Guía para la creación de usuarios en el Sistema Integrado de Información (SIIAT) y radicación de los documentos para la primera convocatoria de 2025-2026">Guía para la creación de usuarios en el Sistema Integrado de Información (SIIAT) y radicación de los documentos para la primera convocatoria 2025-2026.</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://planeacionnacional-my.sharepoint.com/:v:/g/personal/gusbarrera_dnp_gov_co/EV0vOhQI4RNHj5BUOb2UdYEBRJc_7ZjgR30KfMJD9XWbhQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=GTRlYg" alt="Aprenda cómo postular los proyectos susceptibles a financiar con la fuente de asignación para la PAZ, en la marco de las convocatorias de la vigencia 2025-2026" target="_blank">Video tutorial con el ABC de cómo registrar y postular tu proyecto de inversión para ser financiado con recursos de Asignación para la PAZ.</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/anexo-1-listado-municipios-programa-desarrollo-enfoque-territorial-pdet.pdf" title="Anexo 1: Municipios Integrantes del Programa de Desarrollo con Enfoque Territorial - PDET" target="_blank" name="Anexo 1: Municipios Integrantes del Programa de Desarrollo con Enfoque Territorial - PDET">     Anexo 1: Municipios Integrantes del Programa de Desarrollo con Enfoque Territorial - PDET</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/anexo-2-nivel-importancia-brechas.pdf" title="Anexo 2: Nivel de importancia de las brechas" target="_blank" name="Anexo 2: Nivel de importancia de las brechas">     Anexo 2: Nivel de importancia de las brechas</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/anexo-3-resultados-medicion-equidad-territorial-por-entidad.pdf" title="Anexo 3: Resultados medición equidad territorial por entidad" target="_blank" name="Anexo 2: Nivel de importancia de las brechas">Anexo 3: Resultados medición equidad territorial por entidad</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/anexo-4-formato-carta-presentacion-convocatoria-2025-2026.docx" title="Anexo 4: Formato de la Carta de Presentación" target="_blank">Anexo 4: Formato de la Carta de Presentación</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/formato-diligenciamiento-datos-ruta-individual.xlsx" target="_blank" title="Anexo 5: Formato Diligenciamiento de datos ruta individual">Anexo 5: Formato Diligenciamiento de datos ruta individual</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/formato-diligenciamiento-datos-colectivos-pirc.xlsx" title="Anexo 6a: Formato para el diligenciamiento de datos ruta Colectivos PIRC" target="_blank">Anexo 6a: Formato para el diligenciamiento de datos ruta Colectivos PIRC</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/formato-diligenciamiento-datos-ryr.xlsx" title="Anexo 6b: Formato para el diligenciamiento de datos RyR" target="_blank">Anexo 6b: Formato para el diligenciamiento de datos Retornos y Reubicaciones</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;"><a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/simulador-puntaje-metodologia-priorizacion-proyectos-asignacion-paz.xlsx" title="Simulador de puntaje de priorización de convocatoria OCAD Paz" target="_blank" name="Simulador de puntaje de priorización de convocatoria OCAD Paz">Simulador de puntaje de priorización de convocatoria OCAD Paz</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;">Postula tus proyectos – <a href="https://siiat.sgr.gov.co/" title="Postula tus proyectos" target="_blank">Accede al SIIAT</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;">Socialización de los Términos de Referencia – Convocatorias OCAD Paz 2025–2026 <br />
+        Consulta la <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/socializacion-terminos-referencia-convocatorias-ocad-paz-2025-2026.pdf" title="Socialización de los Términos de Referencia – Convocatorias OCAD Paz 2025–2026" target="_blank">presentación aquí</a> y el <a href="https://planeacionnacional-my.sharepoint.com/:v:/g/personal/capacitasgr_dnp_gov_co/EZ0RB5brn8xJqsZpeRjkN9ABtLvXhoQALmUl5WP81Gl81w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=CnSjuc" target="_blank" title="Video de la jornada de socialización de los Términos de Referencia – Convocatorias OCAD Paz 2025–2026">video de la jornada de socialización aquí</a></span></span></p>
+        </li>
+        <li>
+        <p><span style="font-family: Verdana;"><span style="font-size: small;">Metodología y medición de Cierre de Brechas <br />
+        Consulta la <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/socializacion-metodologia-medicion-cierre-brechas.pdf" title="Presentación con la metodología y medición de Cierre de Brechas" target="_blank">presentación aquí</a> y el <a href="https://planeacionnacional-my.sharepoint.com/:v:/g/personal/capacitasgr_dnp_gov_co/ETfzwG1OeGxAuFmBRZoCwhwB8xgTQWwVZPypKJQh0qCGJQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=Bd59Pb" target="_blank" title="Video de la jornada de socialización de metodología y medición de Cierre de Brechas">video de la jornada de socialización aquí</a></span></span></p>
+        </li>
+    </ol>
+    <p>&#160;</p>
+    <h3>Consulte el comunicado de prensa con el balance de postulación de la primera convocatoria del OCAD PAZ Bienio 2025–2026.</h3>
+    <p><span style="font-family: Verdana;"><span style="font-size: small;"> <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/comunicado-prensa-balance-postulacion-primera-convocatoria-ocad-paz-2025-2026.pdf" target="Comunicado de prensa con el balance de postulación de la primera convocatoria del OCAD PAZ 2025–2026" alt="Consulte el comunicado de prensa con el balance de postulación de la primera convocatoria del OCAD PAZ 2025–2026">Comunicado de prensa con el balance de postulación de la primera convocatoria del OCAD PAZ Bienio 2025–2026</a><br />
+    </span> </span></p>
+    <p><span style="font-family: Verdana;"><span style="font-size: small;"> <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/listado-proyectos-postulados-primera-convocatoria-ocad-2025-2026.pdf" target="Listado de proyectos postulados a la primera convocatoria del OCAD Paz para el bienio 2025-2026" alt="Listado de proyectos postulados a la primera convocatoria del OCAD Paz para el bienio 2025-2026">Listado de proyectos postulados a la primera convocatoria del OCAD Paz para el bienio 2025-2026</a> </span></span></p>
+
+  </div>
+
+  <div class="tab-content content2">
+    <!-- Contenido convocatoria 2 -->
+    <img src="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/PublishingImages/banner-segunda-convocatoria-ocad-paz-bienio-2025-2026.jpg" alt="Segunda convocatoria OCAD PAZ para el bienio 2025-2026" width="840" />
+
+    <h2 style="font-size: 20px;"><strong><br />
+    Etapa 1 - postulación de proyectos</strong></h2>
+    <p style="font-size: 14px">Consulte aquí todos los recursos necesarios para participar en la <strong>primera convocatoria del OCAD Paz para el bienio 2025–2026.</strong> <br />
+    <br />
+    Encontrará guías, formatos, términos de referencia, acceso al sistema de postulación (SIIAT), simuladores y otros documentos clave para estructurar y presentar su proyecto.</p>
+    <ol>
+        <li>
+        <p>
+          <span style="font-family: Verdana;">
+            <span style="font-size: 16px;">
+              <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/terminos-de-referencia-convocatoria-2-ocad-paz-bienio-2025-2026.pdf" target="_blank" title="Descargue los términos de Referencia de la segunda convocatoria OCAD PAZ bienio 2025-2026">Términos de Referencia de la segunda convocatoria OCAD PAZ bienio 2025-2026</span>
+        </p>
+        </li>
+        <li>
+        <p>
+          <span style="font-family: Verdana;">
+            <span style="font-size: 16px;">
+              <a href="https://colaboracion.dnp.gov.co/CDT/Sistema%20General%20de%20las%20Regalas%20SGR/OCAD/comunicado-prensa-convocatoria-2-bienio-2025-2026.pdf" target="_blank" title="Descargue el comunicado de prensa - apertura convocatoria 2">Comunicado de prensa - apertura convocatoria 2</span>
+        </p>
+        </li>
+    </ol>
+  </div>
+
+  <div class="tab-content content3">
+    <!-- Contenido convocatoria 3 -->
+    <h2>Cronograma convocatoria 3</h2>
+    <p>Tomado de la Adenda Nro. 4 del 15 de septiembre de 2025, Anexo Técnico de la Resolución 0655 del 3 de marzo de 2025 </p>
+    <table class="convocatorias-ocad">
+      <thead>
+        <th class="col-1">Actividad</th>
+        <th class="col-2">Días hábiles</th>
+        <th class="col-3">Inicio</th>
+        <th class="col-4">Fin</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-1">Publicación términos de referencia</td>
+          <td class="col-2">1</td>
+          <td class="col-3">23/02/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Presentación del proyecto de inversión</td>
+          <td class="col-2">10</td>
+          <td class="col-3">24/02/2026</td>
+          <td class="col-4">9/03/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Revisión de condiciones habilitantes (incluye puntaje mínimo)</td>
+          <td class="col-2">5</td>
+          <td class="col-3">10/03/2026</td>
+          <td class="col-4">16/03/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación de observaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">17/03/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Recibo subsanaciones</td>
+          <td class="col-2">2</td>
+          <td class="col-3">18/03/2026</td>
+          <td class="col-4">19/03/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Revisión de subsanaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">20/03/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación de resultado de subsanaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">24/03/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Evaluación técnica y publicación listado de elegibles</td>
+          <td class="col-2">1</td>
+          <td class="col-3">25/03/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Cumplimiento de requisitos </td>
+          <td class="col-2">62</td>
+          <td class="col-3">26/03/2026</td>
+          <td class="col-4">30/06/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Evaluación técnica integral (incluye puntaje adicional)</td>
+          <td class="col-2">5</td>
+          <td class="col-3">1/07/2026</td>
+          <td class="col-4">7/07/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación listado de proyectos con cumplimiento de requisitos para presentación al OCAD Paz.</td>
+          <td class="col-2">1</td>
+          <td class="col-3">8/07/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Una sesión de aprobación prevista para el 17 de julio de 2026.</p>
+    <!-- Fin contenido convocatoria 3 -->
+  </div>
+    <!-- Contenido convocatoria 4 -->
+    <div class="tab-content content4">
+    <h2>Cronograma convocatoria 4</h2>
+    <p>Tomado de la Adenda Nro. 4 del 15 de septiembre de 2025, Anexo Técnico de la Resolución 0655 del 3 de marzo de 2025.</p>
+    <table class="convocatorias-ocad">
+      <thead>
+        <th class="col-1">Actividad</th>
+        <th class="col-2">Días hábiles</th>
+        <th class="col-3">Inicio</th>
+        <th class="col-4">Fin</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-1">Publicación términos de referencia</td>
+          <td class="col-2">1</td>
+          <td class="col-3">21/07/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Presentación del proyecto de inversión</td>
+          <td class="col-2">10</td>
+          <td class="col-3">22/07/2026</td>
+          <td class="col-4">4/08/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Revisión de condiciones habilitantes (incluye puntaje mínimo)</td>
+          <td class="col-2">5</td>
+          <td class="col-3">5/08/2026</td>
+          <td class="col-4">12/08/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación de observaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">13/08/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Recibo subsanaciones</td>
+          <td class="col-2">2</td>
+          <td class="col-3">14/08/2026</td>
+          <td class="col-4">18/08/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Revisión de subsanaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">19/08/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación de resultado de subsanaciones</td>
+          <td class="col-2">1</td>
+          <td class="col-3">20/08/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Evaluación técnica y publicación listado de elegibles</td>
+          <td class="col-2">1</td>
+          <td class="col-3">21/08/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+        <tr>
+          <td class="col-1">Cumplimiento de requisitos </td>
+          <td class="col-2">62</td>
+          <td class="col-3">224/08/2026</td>
+          <td class="col-4">20/11/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Evaluación técnica integral (incluye puntaje adicional)</td>
+          <td class="col-2">5</td>
+          <td class="col-3">23/11/2026</td>
+          <td class="col-4">27/11/2026</td>
+        </tr>
+        <tr>
+          <td class="col-1">Publicación listado de proyectos con cumplimiento de requisitos para presentación al OCAD Paz.</td>
+          <td class="col-2">1</td>
+          <td class="col-3">30/11/2026</td>
+          <td class="col-4">N/A</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Una sesión de aprobación prevista para el 12 de diciembre de 2026.</p>
+    <!-- Fin contenido convocatoria 4 -->
+  </div>
+
+
+
+
+</div>
+
